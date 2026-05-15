@@ -5,7 +5,7 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
-  background: linear-gradient(135deg, #e8f4fd 0%, #f0f4f8 60%, #e3f2fd 100%);
+  background: linear-gradient(135deg, #f3e5f5 0%, #f8f0fc 60%, #ede7f6 100%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -14,11 +14,11 @@ body {
 }
 
 /* ══════════════════════════════════════
-   Topbar (شريط العودة)
+   Topbar
 ══════════════════════════════════════ */
 .topbar {
   width: 100%;
-  max-width: 720px;
+  max-width: 740px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -28,58 +28,60 @@ body {
 
 .btn-back {
   font-size: 13px;
-  color: #1967d2;
+  color: #6a1b9a;
   text-decoration: none;
   background: white;
-  border: 1px solid #c5d9fb;
+  border: 1px solid #ce93d8;
   padding: 6px 14px;
   border-radius: 8px;
   transition: background 0.2s;
   white-space: nowrap;
 }
-.btn-back:hover { background: #e8f0fe; }
+.btn-back:hover { background: #f3e5f5; }
 
 .section-label {
   font-size: 13px;
-  color: #555;
+  color: #6a1b9a;
   font-weight: 600;
 }
 
 /* ══════════════════════════════════════
-   Card (البطاقة الرئيسية)
+   Card
 ══════════════════════════════════════ */
 .card {
   background: white;
   border-radius: 14px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.11);
+  box-shadow: 0 4px 24px rgba(106, 27, 154, 0.12);
   padding: 32px 36px;
-  max-width: 720px;
+  max-width: 740px;
   width: 100%;
+  border-top: 5px solid #6a1b9a;
 }
 
 /* ══════════════════════════════════════
-   Card Header (رأس البطاقة)
+   Card Header
 ══════════════════════════════════════ */
 .card-header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 14px;
-  margin-bottom: 24px;
+  gap: 12px;
+  margin-bottom: 20px;
 }
 
 .badge {
   display: inline-block;
-  background: #e8f0fe;
-  color: #1967d2;
+  background: #f3e5f5;
+  color: #6a1b9a;
   font-size: 12px;
-  padding: 4px 14px;
+  padding: 4px 16px;
   border-radius: 20px;
-  border: 1px solid #c5d9fb;
+  border: 1px solid #ce93d8;
+  font-weight: 600;
 }
 
 /* ══════════════════════════════════════
-   Progress Bar (مؤشر التقدم)
+   Progress Bar
 ══════════════════════════════════════ */
 .progress-bar {
   display: flex;
@@ -101,66 +103,48 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
-.progress-step.active {
-  background: #1967d2;
-  color: white;
-}
+.progress-step.active { background: #6a1b9a; color: white; }
+.progress-step.done   { background: #43a047; color: white; }
 
-.progress-step.done {
-  background: #43a047;
-  color: white;
-}
-
-.progress-line {
-  width: 60px;
-  height: 3px;
-  background: #e0e0e0;
-}
-
-.progress-label {
-  font-size: 12px;
-  color: #888;
-}
+.progress-label { font-size: 12px; color: #888; }
 
 /* ══════════════════════════════════════
-   Domain Description (وصف القسم)
+   Domain Description
 ══════════════════════════════════════ */
 .domain-desc {
-  background: #eef4ff;
-  border-right: 4px solid #1967d2;
+  background: #faf0ff;
+  border-right: 4px solid #6a1b9a;
   border-radius: 8px;
-  padding: 14px 18px;
+  padding: 12px 16px;
   font-size: 13px;
-  color: #333;
-  line-height: 1.9;
+  color: #444;
+  line-height: 1.8;
   margin-bottom: 20px;
   text-align: right;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.domain-note {
-  background: #fffbea;
-  border-radius: 6px;
-  padding: 8px 12px;
-  font-size: 13px;
-  color: #555;
-  border-right: 3px solid #f4b400;
 }
 
 /* ══════════════════════════════════════
-   Question & Instruction
+   Question & Notes
 ══════════════════════════════════════ */
 .question {
   font-size: 18px;
   font-weight: bold;
   color: #222;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   background: #fffbea;
   border-right: 4px solid #f4b400;
   padding: 12px 16px;
   border-radius: 6px;
+  text-align: right;
+}
+
+.sub-note {
+  font-size: 12px;
+  color: #6a1b9a;
+  background: #f3e5f5;
+  border-radius: 6px;
+  padding: 6px 14px;
+  margin-bottom: 10px;
   text-align: right;
 }
 
@@ -172,17 +156,13 @@ body {
 }
 
 /* ══════════════════════════════════════
-   Item Blocks (كتل البنود)
+   Item Block
 ══════════════════════════════════════ */
-.item-block {
-  display: none;
-}
-.item-block.active {
-  display: block;
-}
+.item-block        { display: none; }
+.item-block.active { display: block; }
 
 /* ══════════════════════════════════════
-   Grid (شبكة الصور)
+   Grid
 ══════════════════════════════════════ */
 .grid {
   display: grid;
@@ -192,7 +172,7 @@ body {
 }
 
 /* ══════════════════════════════════════
-   Cell (خلية الصورة)
+   Cell
 ══════════════════════════════════════ */
 .cell {
   background: #b2dce8;
@@ -206,9 +186,15 @@ body {
   cursor: pointer;
   transition: border-color 0.2s, transform 0.1s, background 0.2s;
   position: relative;
+  padding: 4px;
 }
 
-.cell:hover { border-color: #1967d2; transform: scale(1.03); }
+.cell svg {
+  width: 80%;
+  height: 80%;
+}
+
+.cell:hover          { border-color: #6a1b9a; transform: scale(1.03); }
 .cell.selected-wrong   { background: #fde8e8; border-color: #e53935; }
 .cell.selected-correct { background: #e8f5e9; border-color: #43a047; }
 
@@ -222,47 +208,7 @@ body {
 }
 
 /* ══════════════════════════════════════
-   Shapes – البند الأول (مستطيلات)
-══════════════════════════════════════ */
-.shape-outer {
-  width: 70%;
-  height: 70%;
-  border: 2.5px solid #333;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-}
-
-.shape-inner-empty {
-  border: 2px solid #333;
-  background: transparent;
-}
-
-.shape-inner-filled {
-  background: #111;
-}
-
-/* ══════════════════════════════════════
-   Shapes – البند الثاني (أشرطة)
-══════════════════════════════════════ */
-.shape-bar-vertical {
-  width: 18%;
-  height: 70%;
-  background: #111;
-  border-radius: 2px;
-}
-
-.shape-bar-diagonal {
-  width: 18%;
-  height: 70%;
-  background: #111;
-  border-radius: 2px;
-  transform: rotate(45deg);
-}
-
-/* ══════════════════════════════════════
-   Result Message (رسالة النتيجة)
+   Result Message
 ══════════════════════════════════════ */
 .result-msg {
   font-size: 15px;
@@ -270,15 +216,16 @@ body {
   min-height: 24px;
   text-align: center;
   margin-bottom: 16px;
-  padding: 8px;
-  border-radius: 6px;
+  padding: 10px 14px;
+  border-radius: 8px;
   transition: all 0.3s;
+  line-height: 1.6;
 }
-.result-msg.correct { color: #2e7d32; background: #f1f8f1; }
-.result-msg.wrong   { color: #c62828; background: #fdf1f1; }
+.result-msg.correct { color: #2e7d32; background: #f1f8f1; border: 1px solid #a5d6a7; }
+.result-msg.wrong   { color: #c62828; background: #fdf1f1; border: 1px solid #ef9a9a; }
 
 /* ══════════════════════════════════════
-   Navigation Bar (شريط التنقل)
+   Nav Bar
 ══════════════════════════════════════ */
 .nav-bar {
   display: flex;
@@ -300,15 +247,15 @@ body {
   transition: filter 0.2s, opacity 0.2s;
 }
 
-.btn-prev  { background: #e8f0fe; color: #1967d2; }
-.btn-reset { background: #fff3e0; color: #e65100; }
-.btn-next  { background: #1967d2; color: white;   }
+.btn-prev  { background: #f3e5f5; color: #6a1b9a; border: 1px solid #ce93d8; }
+.btn-reset { background: #fff3e0; color: #e65100; border: 1px solid #ffcc80; }
+.btn-next  { background: #6a1b9a; color: white; }
 
 .btn-nav:hover:not(:disabled) { filter: brightness(0.93); }
 .btn-nav:disabled { opacity: 0.35; cursor: not-allowed; }
 
 /* ══════════════════════════════════════
-   Finish Screen (شاشة الإنهاء)
+   Finish Screen
 ══════════════════════════════════════ */
 .finish-screen {
   display: none;
@@ -319,23 +266,13 @@ body {
   text-align: center;
   animation: fadeIn 0.5s ease;
 }
-
 .finish-screen.show { display: flex; }
-
 .finish-icon { font-size: 52px; }
-
-.finish-screen h2 {
-  font-size: 20px;
-  color: #1a1a2e;
-}
-
-.finish-screen p {
-  font-size: 14px;
-  color: #555;
-}
+.finish-screen h2 { font-size: 20px; color: #1a1a2e; }
+.finish-screen p  { font-size: 14px; color: #555; }
 
 .btn-home {
-  background: #1967d2;
+  background: #6a1b9a;
   color: white;
   border: none;
   padding: 11px 28px;
