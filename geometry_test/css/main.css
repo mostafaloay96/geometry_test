@@ -1,0 +1,195 @@
+/* ══════════════════════════════════════
+   Reset & Base
+══════════════════════════════════════ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+  background: linear-gradient(135deg, #e8f4fd 0%, #f0f4f8 60%, #e3f2fd 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* ══════════════════════════════════════
+   Header
+══════════════════════════════════════ */
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header .logo {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.header h1 {
+  font-size: 24px;
+  color: #1a1a2e;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.header .subtitle {
+  font-size: 14px;
+  color: #5f6368;
+  margin-bottom: 12px;
+}
+
+.header .theory-tag {
+  display: inline-block;
+  background: #e8f0fe;
+  color: #1967d2;
+  font-size: 12px;
+  padding: 4px 14px;
+  border-radius: 20px;
+  border: 1px solid #c5d9fb;
+}
+
+/* ══════════════════════════════════════
+   Sections Grid
+══════════════════════════════════════ */
+.sections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+  width: 100%;
+  max-width: 960px;
+}
+
+/* ══════════════════════════════════════
+   Section Card
+══════════════════════════════════════ */
+.section-card {
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-top: 4px solid var(--accent);
+  position: relative;
+  overflow: hidden;
+}
+
+.section-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
+}
+
+.section-card .card-icon {
+  font-size: 28px;
+}
+
+.section-card .card-number {
+  position: absolute;
+  top: 14px;
+  left: 18px;
+  font-size: 11px;
+  color: #aaa;
+  font-weight: bold;
+}
+
+.section-card h2 {
+  font-size: 17px;
+  color: #1a1a2e;
+  font-weight: 700;
+}
+
+.section-card .en-title {
+  font-size: 12px;
+  color: #888;
+  margin-top: -8px;
+}
+
+.section-card p {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* ══════════════════════════════════════
+   Buttons
+══════════════════════════════════════ */
+.btn-start {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  transition: filter 0.2s, transform 0.1s;
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.btn-start:hover {
+  filter: brightness(0.9);
+  transform: scale(1.02);
+}
+
+.btn-start.disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.badge-ready {
+  display: inline-block;
+  background: #e6f9ee;
+  color: #2e7d32;
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: bold;
+  border: 1px solid #a5d6a7;
+}
+
+.badge-soon {
+  display: inline-block;
+  background: #fff3e0;
+  color: #e65100;
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: bold;
+  border: 1px solid #ffcc80;
+}
+
+/* ══════════════════════════════════════
+   Accent Colors per Section
+══════════════════════════════════════ */
+.card-practice   { --accent: #1967d2; }
+.card-topology   { --accent: #6a1b9a; }
+.card-euclidean  { --accent: #00796b; }
+.card-geometric  { --accent: #c62828; }
+.card-symmetry   { --accent: #e65100; }
+.card-metric     { --accent: #2e7d32; }
+.card-transform  { --accent: #1565c0; }
+
+/* ══════════════════════════════════════
+   Footer
+══════════════════════════════════════ */
+.footer {
+  margin-top: 48px;
+  font-size: 12px;
+  color: #aaa;
+  text-align: center;
+}
