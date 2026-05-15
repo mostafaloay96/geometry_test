@@ -5,7 +5,7 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
-  background: linear-gradient(135deg, #f3e5f5 0%, #f8f0fc 60%, #ede7f6 100%);
+  background: linear-gradient(135deg, #e0f2f1 0%, #f0faf9 60%, #b2dfdb 100%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -28,20 +28,20 @@ body {
 
 .btn-back {
   font-size: 13px;
-  color: #6a1b9a;
+  color: #00796b;
   text-decoration: none;
   background: white;
-  border: 1px solid #ce93d8;
+  border: 1px solid #80cbc4;
   padding: 6px 14px;
   border-radius: 8px;
   transition: background 0.2s;
   white-space: nowrap;
 }
-.btn-back:hover { background: #f3e5f5; }
+.btn-back:hover { background: #e0f2f1; }
 
 .section-label {
   font-size: 13px;
-  color: #6a1b9a;
+  color: #00796b;
   font-weight: 600;
 }
 
@@ -51,11 +51,11 @@ body {
 .card {
   background: white;
   border-radius: 14px;
-  box-shadow: 0 4px 24px rgba(106, 27, 154, 0.12);
+  box-shadow: 0 4px 24px rgba(0, 121, 107, 0.12);
   padding: 32px 36px;
   max-width: 740px;
   width: 100%;
-  border-top: 5px solid #6a1b9a;
+  border-top: 5px solid #00796b;
 }
 
 /* ══════════════════════════════════════
@@ -71,12 +71,12 @@ body {
 
 .badge {
   display: inline-block;
-  background: #f3e5f5;
-  color: #6a1b9a;
+  background: #e0f2f1;
+  color: #00796b;
   font-size: 12px;
   padding: 4px 16px;
   border-radius: 20px;
-  border: 1px solid #ce93d8;
+  border: 1px solid #80cbc4;
   font-weight: 600;
 }
 
@@ -103,7 +103,7 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
-.progress-step.active { background: #6a1b9a; color: white; }
+.progress-step.active { background: #00796b; color: white; }
 .progress-step.done   { background: #43a047; color: white; }
 
 .progress-line {
@@ -118,8 +118,8 @@ body {
    Domain Description
 ══════════════════════════════════════ */
 .domain-desc {
-  background: #faf0ff;
-  border-right: 4px solid #6a1b9a;
+  background: #f0faf9;
+  border-right: 4px solid #00796b;
   border-radius: 8px;
   padding: 12px 16px;
   font-size: 13px;
@@ -146,8 +146,8 @@ body {
 
 .sub-note {
   font-size: 12px;
-  color: #6a1b9a;
-  background: #f3e5f5;
+  color: #00695c;
+  background: #e0f2f1;
   border-radius: 6px;
   padding: 6px 14px;
   margin-bottom: 10px;
@@ -196,39 +196,40 @@ body {
 }
 
 .cell svg {
-  width: 80%;
-  height: 80%;
+  width: 88%;
+  height: 88%;
 }
 
-.cell:hover          { border-color: #6a1b9a; transform: scale(1.03); }
+.cell:hover            { border-color: #00796b; transform: scale(1.03); }
 .cell.selected-wrong   { background: #fde8e8; border-color: #e53935; }
 .cell.selected-correct { background: #e8f5e9; border-color: #43a047; }
 
-.cell .number {
+/* ══════════════════════════════════════
+   Cell Number
+══════════════════════════════════════ */
+.cell-num {
   position: absolute;
-  top: 5px;
-  right: 7px;
+  top: 4px;
+  left: 6px;
   font-size: 11px;
   color: #555;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 /* ══════════════════════════════════════
    Result Message
 ══════════════════════════════════════ */
 .result-msg {
-  font-size: 15px;
-  font-weight: bold;
-  min-height: 24px;
-  text-align: center;
-  margin-bottom: 16px;
+  font-size: 13px;
   padding: 10px 14px;
   border-radius: 8px;
+  margin-bottom: 10px;
+  text-align: right;
+  min-height: 20px;
   transition: all 0.3s;
-  line-height: 1.6;
 }
-.result-msg.correct { color: #2e7d32; background: #f1f8f1; border: 1px solid #a5d6a7; }
-.result-msg.wrong   { color: #c62828; background: #fdf1f1; border: 1px solid #ef9a9a; }
+.result-msg.correct { background: #e8f5e9; color: #2e7d32; border: 1px solid #a5d6a7; }
+.result-msg.wrong   { background: #fde8e8; color: #c62828; border: 1px solid #ef9a9a; }
 
 /* ══════════════════════════════════════
    Nav Bar
@@ -253,9 +254,9 @@ body {
   transition: filter 0.2s, opacity 0.2s;
 }
 
-.btn-prev  { background: #f3e5f5; color: #6a1b9a; border: 1px solid #ce93d8; }
+.btn-prev  { background: #e0f2f1; color: #00796b; border: 1px solid #80cbc4; }
 .btn-reset { background: #fff3e0; color: #e65100; border: 1px solid #ffcc80; }
-.btn-next  { background: #6a1b9a; color: white; }
+.btn-next  { background: #00796b; color: white; }
 
 .btn-nav:hover:not(:disabled) { filter: brightness(0.93); }
 .btn-nav:disabled { opacity: 0.35; cursor: not-allowed; }
@@ -278,7 +279,7 @@ body {
 .finish-screen p  { font-size: 14px; color: #555; }
 
 .btn-home {
-  background: #6a1b9a;
+  background: #00796b;
   color: white;
   border: none;
   padding: 11px 28px;
