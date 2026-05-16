@@ -123,7 +123,7 @@
       padding: 22px;
       margin-bottom: 24px;
     }
-    .chart-title { font-size: 14px; font-weight: 700; color: #333; margin-bottom: 16px; display: flex; align-items: center; gap: 6px; }
+    .chart-title { font-size: 14px; font-weight: 700; color: #333; margin-bottom: 30px; display: flex; align-items: center; gap: 6px; }
     .bar-chart { display: flex; align-items: flex-end; gap: 8px; height: 140px; }
     .bc-col { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; }
     .bc-bar { width: 100%; border-radius: 6px 6px 0 0; min-height: 4px; transition: height 0.8s ease; }
@@ -193,13 +193,22 @@
     <!-- نتائج الأقسام -->
     <div class="sections-results" id="sectionsGrid"></div>
 
-    <!-- رسم بياني -->
+    <!-- رسم بياني الدرجات -->
     <div class="chart-section">
       <div class="chart-title">
         <span class="material-icons" style="font-size:18px;color:#1565c0">bar_chart</span>
         الأداء في كل قسم (%)
       </div>
       <div class="bar-chart" id="barChart"></div>
+    </div>
+
+    <!-- رسم بياني الوقت -->
+    <div class="chart-section">
+      <div class="chart-title">
+        <span class="material-icons" style="font-size:18px;color:#e65100">timer</span>
+        الوقت المستغرق في كل قسم
+      </div>
+      <div class="bar-chart" id="timeChart"></div>
     </div>
 
     <!-- الأزرار -->
@@ -304,6 +313,29 @@
         + '</div>';
     });
     document.getElementById('barChart').innerHTML = barHTML;
+
+    // ── رسم بياني الوقت ──
+    var maxTime = 1;
+    GEO_SECTIONS.forEach(function(s) {
+      var d = scores[s.key];
+      if (d && d.time) maxTime = Math.max(maxTime, d.time);
+    });
+    var timeHTML = '';
+    GEO_SECTIONS.forEach(function(s) {
+      var d = scores[s.key];
+      var hasDone = done.indexOf(s.key) !== -1;
+      var timeMs  = (d && d.time) ? d.time : 0;
+      var ts = Math.floor(timeMs / 1000);
+      var tm = Math.floor(ts / 60); ts = ts % 60;
+      var timeLabel = timeMs > 0 ? (tm > 0 ? tm + 'د ' + ts + 'ث' : ts + 'ث') : '';
+      var barH = hasDone && maxTime > 0 ? Math.max(Math.round(timeMs / maxTime * 130), 4) : 4;
+      timeHTML += '<div class="bc-col">'
+        + '<div class="bc-val">' + timeLabel + '</div>'
+        + '<div class="bc-bar" style="height:' + barH + 'px;background:' + (hasDone ? s.color : '#e0e0e0') + '"></div>'
+        + '<div class="bc-lbl">' + s.label.replace('البنود ','تدريبي') + '</div>'
+        + '</div>';
+    });
+    document.getElementById('timeChart').innerHTML = timeHTML;
 
     // ── الدرجة الكلية ──
     var totalPct = ACTUAL_TOTAL > 0 ? Math.round(totalScore / ACTUAL_TOTAL * 100) : 0;

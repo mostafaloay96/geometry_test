@@ -11,6 +11,7 @@ var currentItem  = 1;
 var itemAnswered = { 1: false, 2: false, 3: false, 4: false,
                      5: false, 6: false, 7: false, 8: false };
 var geoCorrectCount = 0;
+var _autoNext = null;
 
 // الملاحظة الديناميكية لكل بند
 var subNotes = {
@@ -91,8 +92,13 @@ function choose(cell) {
     msg.className   = "result-msg wrong";
   }
 
+  // تلوين خطوة التقدم
+  var stepEl = document.getElementById("step-" + item);
+  if (stepEl) stepEl.classList.add(isCorrect ? "step-correct" : "step-wrong");
+
   if (item < TOTAL_ITEMS) {
     document.getElementById("btnNext").disabled = false;
+    _autoNext = setTimeout(nextItem, 1000);
   } else {
     setTimeout(showFinish, 1000);
   }
@@ -101,7 +107,7 @@ function choose(cell) {
 // ══════════════════════════════════════
 // التنقل
 // ══════════════════════════════════════
-function nextItem() { if (currentItem < TOTAL_ITEMS) goToItem(currentItem + 1); }
+function nextItem() { clearTimeout(_autoNext); if (currentItem < TOTAL_ITEMS) goToItem(currentItem + 1); }
 function prevItem() { if (currentItem > 1)           goToItem(currentItem - 1); }
 
 function goToItem(index) {
@@ -136,9 +142,10 @@ function resetCurrent() {
   document.querySelectorAll("[data-item='" + item + "']").forEach(function(c) {
     c.classList.remove("selected-correct", "selected-wrong");
   });
+  var stepEl = document.getElementById("step-" + item);
+  if (stepEl) stepEl.classList.remove("step-correct", "step-wrong");
 
-  var msg = document.getElementById("result-" + item);
-  msg.textContent = "";
+  var msg = document.getElementById("result-" + item);g.textContent = "";
   msg.className   = "result-msg";
 
   if (item < TOTAL_ITEMS)

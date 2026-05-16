@@ -76,6 +76,14 @@
       }
       .btn-modal-reset:hover { filter:brightness(.95); }
 
+      /* ── Estimated time ── */
+      .est-time {
+        font-size: 11px; color: #9e9e9e;
+        display: inline-flex; align-items: center; gap: 3px;
+        margin-bottom: 2px;
+      }
+      .est-time .material-icons { font-size: 12px; }
+
       /* ── Locked section ── */
       .section-card.locked { opacity:.52; }
       .section-card.locked .btn-start {
@@ -268,8 +276,11 @@
       'practice':'practice-items.html','topology':'topology.html',
       'euclidean':'euclidean.html','geometric':'geometric.html',
       'symmetry':'symmetry.html','metric':'metric.html','transform':'transform.html'
-    };
-    var eduMap = { preschool:'ما قبل المدرسة', primary:'ابتدائي', middle:'متوسط',
+    };    var estimatedTimes = {
+      'practice':'~١ دقيقة', 'topology':'~٢ دقيقتان',
+      'euclidean':'~٥ دقائق', 'geometric':'~٥ دقائق',
+      'symmetry':'~٥ دقائق', 'metric':'~٥ دقائق', 'transform':'~٥ دقائق'
+    };    var eduMap = { preschool:'ما قبل المدرسة', primary:'ابتدائي', middle:'متوسط',
                    high:'ثانوي', university:'جامعي', postgrad:'دراسات عليا', other:'أخرى' };
     var genderMap = { male:'ذكر', female:'أنثى' };
 
@@ -374,9 +385,19 @@
         var isDone   = done.indexOf(key) !== -1;
         var prevDone = i === 0 ? !!p.age : done.indexOf(sectionOrder[i-1]) !== -1;
 
+        // إضافة الوقت التقديري
+        if (!cardEl.querySelector('.est-time')) {
+          var etEl = document.createElement('span');
+          etEl.className = 'est-time';
+          etEl.innerHTML = '<span class="material-icons">schedule</span>' + estimatedTimes[key];
+          if (badge) badge.insertAdjacentElement('beforebegin', etEl);
+        }
+
         if (isDone) {
-          // مكتمل
-          if (badge) { badge.textContent = 'مكتمل'; badge.className = 'badge-ready badge-done'; }
+          // مكتمل: اعرض الدرجة
+          var sc = data.scores[key];
+          var scoreText = sc ? (sc.score + '/' + sc.total) : 'مكتمل';
+          if (badge) { badge.textContent = scoreText; badge.className = 'badge-ready badge-done'; }
           card.innerHTML = '<span class="material-icons btn-play">replay</span> إعادة';
         } else if (!prevDone) {
           // مقفول

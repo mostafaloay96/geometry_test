@@ -132,6 +132,10 @@
 }
 .btn-next-section:hover { filter: brightness(0.88); }
 
+/* ── تلوين خطوات التقدم حسب الإجابة ── */
+.progress-step.step-correct { background: #2e7d32 !important; color: white !important; }
+.progress-step.step-wrong   { background: #c62828 !important; color: white !important; }
+
 /* ── وضع اللمس والشاشات الصغيرة ── */
 @media (max-width: 768px), (pointer: coarse) {
   .cell {
