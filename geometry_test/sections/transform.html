@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>التحويلات الهندسية – اختبار الحساسية للهندسة</title>
+  <link rel="stylesheet" href="../css/transform.css" />
+</head>
+<body>
+
+  <!-- ══ شريط العودة ══ -->
+  <nav class="topbar">
+    <a href="../index.html" class="btn-back">← العودة للرئيسية</a>
+    <span class="section-label">التحويلات الهندسية – Geometrical Transformations</span>
+  </nav>
+
+  <div class="card">
+
+    <!-- ══ رأس البطاقة ══ -->
+    <div class="card-header">
+      <span class="badge">المجال السابع: التحويلات الهندسية</span>
+      <div class="progress-bar">
+        <div class="progress-step active" id="step-1">١</div>
+        <div class="progress-line"></div>
+        <div class="progress-step" id="step-2">٢</div>
+        <div class="progress-line"></div>
+        <div class="progress-step" id="step-3">٣</div>
+        <div class="progress-line"></div>
+        <div class="progress-step" id="step-4">٤</div>
+        <div class="progress-line"></div>
+        <div class="progress-step" id="step-5">٥</div>
+        <div class="progress-line"></div>
+        <div class="progress-step" id="step-6">٦</div>
+        <div class="progress-line"></div>
+        <div class="progress-step" id="step-7">٧</div>
+        <div class="progress-line"></div>
+        <div class="progress-step" id="step-8">٨</div>
+      </div>
+      <p class="progress-label" id="progressLabel">البند ١ من ٨</p>
+    </div>
+
+    <!-- ══ وصف المجال ══ -->
+    <div class="domain-desc">
+      إدراك التغيرات على الشكل مع الحفاظ على خصائصه: الإزاحة، الدوران، الانعكاس، والتكبير.
+      القدرة على تمييز نوع التحويل الهندسي واتجاهه ونسبته، وتحديد الشكل الذي خضع لتحويل مختلف.
+    </div>
+
+    <!-- ══ السؤال ══ -->
+    <div class="question">س / "أي صورة تختلف عن البقية؟"</div>
+    <p class="sub-note" id="subNote">( السؤال يقيس القدرة على مقارنة <strong>اتجاه الإزاحة</strong>: تحديد السهم الذي يشير إلى اتجاه مختلف )</p>
+    <p class="instruction">انقر على الصورة التي تبدو مختلفة عن بقية الصور</p>
+
+    <!-- ══════════════════════════════════════
+         البند الأول – اتجاه الإزاحة
+         الصحيحة: خلية 4 (سهم يشير للأعلى)
+    ════════════════════════════════════════ -->
+    <div class="item-block active" id="item-1">
+      <div class="grid">
+
+        <!-- خلية 1: سهم يشير يميناً -->
+        <div class="cell" data-item="1" data-index="1" onclick="choose(this)">
+          <span class="cell-num">١</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="15,42 70,42 70,30 90,50 70,70 70,58 15,58" fill="#222"/>
+          </svg>
+        </div>
+
+        <!-- خلية 2: سهم يشير يميناً -->
+        <div class="cell" data-item="1" data-index="2" onclick="choose(this)">
+          <span class="cell-num">٢</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="15,42 70,42 70,30 90,50 70,70 70,58 15,58" fill="#222"/>
+          </svg>
+        </div>
+
+        <!-- خلية 3: سهم يشير يميناً -->
+        <div class="cell" data-item="1" data-index="3" onclick="choose(this)">
+          <span class="cell-num">٣</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="15,42 70,42 70,30 90,50 70,70 70,58 15,58" fill="#222"/>
+          </svg>
+        </div>
+
+        <!-- خلية 4: سهم يشير للأعلى ← الصحيحة -->
+        <div class="cell" data-item="1" data-index="4" data-correct="true" onclick="choose(this)">
+          <span class="cell-num">٤</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="42,88 42,30 30,30 50,10 70,30 58,30 58,88" fill="#222"/>
+          </svg>
+        </div>
+
+        <!-- خلية 5: سهم يشير يميناً -->
+        <div class="cell" data-item="1" data-index="5" onclick="choose(this)">
+          <span class="cell-num">٥</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="15,42 70,42 70,30 90,50 70,70 70,58 15,58" fill="#222"/>
+          </svg>
+        </div>
+
+        <!-- خلية 6: سهم يشير يميناً -->
+        <div class="cell" data-item="1" data-index="6" onclick="choose(this)">
+          <span class="cell-num">٦</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="15,42 70,42 70,30 90,50 70,70 70,58 15,58" fill="#222"/>
+          </svg>
+        </div>
+
+      </div>
+      <div class="result-msg" id="result-1"></div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         البند الثاني – زاوية الدوران (شكل L)
+         الصحيحة: خلية 2 (الشكل الأصلي غير المدوَّر)
+    ════════════════════════════════════════ -->
+    <div class="item-block" id="item-2">
+      <div class="grid">
+
+        <!-- خلية 1: شكل L مدوَّر 90° (شكل Γ) -->
+        <div class="cell" data-item="2" data-index="1" onclick="choose(this)">
+          <span class="cell-num">١</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="15,75 15,60 60,60 60,25 75,25 75,75" fill="#222"/>
+          </svg>
+        </div>
+
+        <!-- خلية 2: شكل L الأصلي (لم يُدوَّر) ← الصحيحة -->
+        <div class="cell" data-item="2" data-index="2" data-correct="true" onclick="choose(this)">
+          <span class="cell-num">٢</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="25,15 40,15 40,60 75,60 75,75 25,75" fill="#222"/>
+          </svg>
+        </div>
+
+        <!-- خلية 3: شكل L مدوَّر 90° -->
+        <div class="cell" data-item="2" data-index="3" onclick="choose(this)">
+          <span class="cell-num">٣</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="15,75 15,60 60,60 60,25 75,25 75,75" fill="#222"/>
+          </svg>
+        </div>
+
+        <!-- خلية 4: شكل L مدوَّر 90° -->
+        <div class="cell" data-item="2" data-index="4" onclick="choose(this)">
+          <span class="cell-num">٤</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="15,75 15,60 60,60 60,25 75,25 75,75" fill="#222"/>
+          </svg>
+        </div>
+
+        <!-- خلية 5: شكل L مدوَّر 90° -->
+        <div class="cell" data-item="2" data-index="5" onclick="choose(this)">
+          <span class="cell-num">٥</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="15,75 15,60 60,60 60,25 75,25 75,75" fill="#222"/>
+          </svg>
+        </div>
+
+        <!-- خلية 6: شكل L مدوَّر 90° -->
+        <div class="cell" data-item="2" data-index="6" onclick="choose(this)">
+          <span class="cell-num">٦</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="15,75 15,60 60,60 60,25 75,25 75,75" fill="#222"/>
+          </svg>
+        </div>
+
+      </div>
+      <div class="result-msg" id="result-2"></div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         البند الثالث – محور الانعكاس (حرف F)
+         الصحيحة: خلية 6 (منعكس رأسياً = مقلوب)
+    ════════════════════════════════════════ -->
+    <div class="item-block" id="item-3">
+      <div class="grid">
+
+        <!-- خلية 1: F منعكس أفقياً (أشرطة تشير يساراً) -->
+        <div class="cell" data-item="3" data-index="1" onclick="choose(this)">
+          <span class="cell-num">١</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="65" y="15" width="10" height="70" fill="#222"/>
+            <rect x="30" y="15" width="35" height="10" fill="#222"/>
+            <rect x="40" y="43" width="25" height="10" fill="#222"/>
+          </svg>
+        </div>
+
+        <!-- خلية 2: F منعكس أفقياً -->
+        <div class="cell" data-item="3" data-index="2" onclick="choose(this)">
+          <span class="cell-num">٢</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="65" y="15" width="10" height="70" fill="#222"/>
+            <rect x="30" y="15" width="35" height="10" fill="#222"/>
+            <rect x="40" y="43" width="25" height="10" fill="#222"/>
+          </svg>
+        </div>
+
+        <!-- خلية 3: F منعكس أفقياً -->
+        <div class="cell" data-item="3" data-index="3" onclick="choose(this)">
+          <span class="cell-num">٣</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="65" y="15" width="10" height="70" fill="#222"/>
+            <rect x="30" y="15" width="35" height="10" fill="#222"/>
+            <rect x="40" y="43" width="25" height="10" fill="#222"/>
+          </svg>
+        </div>
+
+        <!-- خلية 4: F منعكس أفقياً -->
+        <div class="cell" data-item="3" data-index="4" onclick="choose(this)">
+          <span class="cell-num">٤</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="65" y="15" width="10" height="70" fill="#222"/>
+            <rect x="30" y="15" width="35" height="10" fill="#222"/>
+            <rect x="40" y="43" width="25" height="10" fill="#222"/>
+          </svg>
+        </div>
+
+        <!-- خلية 5: F منعكس أفقياً -->
+        <div class="cell" data-item="3" data-index="5" onclick="choose(this)">
+          <span class="cell-num">٥</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="65" y="15" width="10" height="70" fill="#222"/>
+            <rect x="30" y="15" width="35" height="10" fill="#222"/>
+            <rect x="40" y="43" width="25" height="10" fill="#222"/>
+          </svg>
+        </div>
+
+        <!-- خلية 6: F منعكس رأسياً (مقلوب رأساً على عقب) ← الصحيحة -->
+        <div class="cell" data-item="3" data-index="6" data-correct="true" onclick="choose(this)">
+          <span class="cell-num">٦</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="25" y="15" width="10" height="70" fill="#222"/>
+            <rect x="35" y="75" width="35" height="10" fill="#222"/>
+            <rect x="35" y="47" width="25" height="10" fill="#222"/>
+          </svg>
+        </div>
+
+      </div>
+      <div class="result-msg" id="result-3"></div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         البند الرابع – نسبة التكبير (دوائر)
+         الصحيحة: خلية 3 (دائرة صغيرة)
+    ════════════════════════════════════════ -->
+    <div class="item-block" id="item-4">
+      <div class="grid">
+
+        <!-- خلية 1: دائرة كبيرة -->
+        <div class="cell" data-item="4" data-index="1" onclick="choose(this)">
+          <span class="cell-num">١</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="38" fill="#222"/>
+          </svg>
+        </div>
+
+        <!-- خلية 2: دائرة كبيرة -->
+        <div class="cell" data-item="4" data-index="2" onclick="choose(this)">
+          <span class="cell-num">٢</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="38" fill="#222"/>
+          </svg>
+        </div>
+
+        <!-- خلية 3: دائرة صغيرة ← الصحيحة -->
+        <div class="cell" data-item="4" data-index="3" data-correct="true" onclick="choose(this)">
+          <span class="cell-num">٣</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="18" fill="#222"/>
+          </svg>
+        </div>
+
+        <!-- خلية 4: دائرة كبيرة -->
+        <div class="cell" data-item="4" data-index="4" onclick="choose(this)">
+          <span class="cell-num">٤</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="38" fill="#222"/>
+          </svg>
+        </div>
+
+        <!-- خلية 5: دائرة كبيرة -->
+        <div class="cell" data-item="4" data-index="5" onclick="choose(this)">
+          <span class="cell-num">٥</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="38" fill="#222"/>
+          </svg>
+        </div>
+
+        <!-- خلية 6: دائرة كبيرة -->
+        <div class="cell" data-item="4" data-index="6" onclick="choose(this)">
+          <span class="cell-num">٦</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="38" fill="#222"/>
+          </svg>
+        </div>
+
+      </div>
+      <div class="result-msg" id="result-4"></div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         البند الخامس – نوع التحويل (معيَّن مقابل مربع)
+         الصحيحة: خلية 5 (مربع غير مدوَّر)
+    ════════════════════════════════════════ -->
+    <div class="item-block" id="item-5">
+      <div class="grid">
+
+        <!-- خلية 1: معيَّن (مربع مدوَّر 45°) -->
+        <div class="cell" data-item="5" data-index="1" onclick="choose(this)">
+          <span class="cell-num">١</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="50,10 90,50 50,90 10,50" fill="#222"/>
+          </svg>
+        </div>
+
+        <!-- خلية 2: معيَّن -->
+        <div class="cell" data-item="5" data-index="2" onclick="choose(this)">
+          <span class="cell-num">٢</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="50,10 90,50 50,90 10,50" fill="#222"/>
+          </svg>
+        </div>
+
+        <!-- خلية 3: معيَّن -->
+        <div class="cell" data-item="5" data-index="3" onclick="choose(this)">
+          <span class="cell-num">٣</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="50,10 90,50 50,90 10,50" fill="#222"/>
+          </svg>
+        </div>
+
+        <!-- خلية 4: معيَّن -->
+        <div class="cell" data-item="5" data-index="4" onclick="choose(this)">
+          <span class="cell-num">٤</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="50,10 90,50 50,90 10,50" fill="#222"/>
+          </svg>
+        </div>
+
+        <!-- خلية 5: مربع (لم يُدوَّر) ← الصحيحة -->
+        <div class="cell" data-item="5" data-index="5" data-correct="true" onclick="choose(this)">
+          <span class="cell-num">٥</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="20" y="20" width="60" height="60" fill="#222"/>
+          </svg>
+        </div>
+
+        <!-- خلية 6: معيَّن -->
+        <div class="cell" data-item="5" data-index="6" onclick="choose(this)">
+          <span class="cell-num">٦</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="50,10 90,50 50,90 10,50" fill="#222"/>
+          </svg>
+        </div>
+
+      </div>
+      <div class="result-msg" id="result-5"></div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         البند السادس – زاوية دوران المثلث
+         الصحيحة: خلية 1 (مثلث يشير للأسفل = 180°)
+    ════════════════════════════════════════ -->
+    <div class="item-block" id="item-6">
+      <div class="grid">
+
+        <!-- خلية 1: مثلث يشير للأسفل (180°) ← الصحيحة -->
+        <div class="cell" data-item="6" data-index="1" data-correct="true" onclick="choose(this)">
+          <span class="cell-num">١</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="50,90 85,15 15,15" fill="#222"/>
+          </svg>
+        </div>
+
+        <!-- خلية 2: مثلث يشير يميناً (90°) -->
+        <div class="cell" data-item="6" data-index="2" onclick="choose(this)">
+          <span class="cell-num">٢</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="90,50 15,15 15,85" fill="#222"/>
+          </svg>
+        </div>
+
+        <!-- خلية 3: مثلث يشير يميناً (90°) -->
+        <div class="cell" data-item="6" data-index="3" onclick="choose(this)">
+          <span class="cell-num">٣</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="90,50 15,15 15,85" fill="#222"/>
+          </svg>
+        </div>
+
+        <!-- خلية 4: مثلث يشير يميناً (90°) -->
+        <div class="cell" data-item="6" data-index="4" onclick="choose(this)">
+          <span class="cell-num">٤</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="90,50 15,15 15,85" fill="#222"/>
+          </svg>
+        </div>
+
+        <!-- خلية 5: مثلث يشير يميناً (90°) -->
+        <div class="cell" data-item="6" data-index="5" onclick="choose(this)">
+          <span class="cell-num">٥</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="90,50 15,15 15,85" fill="#222"/>
+          </svg>
+        </div>
+
+        <!-- خلية 6: مثلث يشير يميناً (90°) -->
+        <div class="cell" data-item="6" data-index="6" onclick="choose(this)">
+          <span class="cell-num">٦</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="90,50 15,15 15,85" fill="#222"/>
+          </svg>
+        </div>
+
+      </div>
+      <div class="result-msg" id="result-6"></div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         البند السابع – حجم التكبير (مخمسات)
+         الصحيحة: خلية 4 (مخمس كبير)
+    ════════════════════════════════════════ -->
+    <div class="item-block" id="item-7">
+      <div class="grid">
+
+        <!-- خلية 1: مخمس متوسط -->
+        <div class="cell" data-item="7" data-index="1" onclick="choose(this)">
+          <span class="cell-num">١</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="50,20 22,41 32,74 68,74 79,41" fill="#222"/>
+          </svg>
+        </div>
+
+        <!-- خلية 2: مخمس متوسط -->
+        <div class="cell" data-item="7" data-index="2" onclick="choose(this)">
+          <span class="cell-num">٢</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="50,20 22,41 32,74 68,74 79,41" fill="#222"/>
+          </svg>
+        </div>
+
+        <!-- خلية 3: مخمس متوسط -->
+        <div class="cell" data-item="7" data-index="3" onclick="choose(this)">
+          <span class="cell-num">٣</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="50,20 22,41 32,74 68,74 79,41" fill="#222"/>
+          </svg>
+        </div>
+
+        <!-- خلية 4: مخمس كبير ← الصحيحة -->
+        <div class="cell" data-item="7" data-index="4" data-correct="true" onclick="choose(this)">
+          <span class="cell-num">٤</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="50,5 7,36 24,86 77,86 93,36" fill="#222"/>
+          </svg>
+        </div>
+
+        <!-- خلية 5: مخمس متوسط -->
+        <div class="cell" data-item="7" data-index="5" onclick="choose(this)">
+          <span class="cell-num">٥</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="50,20 22,41 32,74 68,74 79,41" fill="#222"/>
+          </svg>
+        </div>
+
+        <!-- خلية 6: مخمس متوسط -->
+        <div class="cell" data-item="7" data-index="6" onclick="choose(this)">
+          <span class="cell-num">٦</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="50,20 22,41 32,74 68,74 79,41" fill="#222"/>
+          </svg>
+        </div>
+
+      </div>
+      <div class="result-msg" id="result-7"></div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         البند الثامن – الانعكاس الأفقي (P مقابل q)
+         الصحيحة: خلية 3 (شكل P الأصلي غير المنعكس)
+    ════════════════════════════════════════ -->
+    <div class="item-block" id="item-8">
+      <div class="grid">
+
+        <!-- خلية 1: شكل q (P منعكس أفقياً) -->
+        <div class="cell" data-item="8" data-index="1" onclick="choose(this)">
+          <span class="cell-num">١</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="64" y="15" width="12" height="70" fill="#222"/>
+            <rect x="29" y="15" width="35" height="10" fill="#222"/>
+            <rect x="29" y="44" width="35" height="10" fill="#222"/>
+            <rect x="29" y="15" width="10" height="39" fill="#222"/>
+          </svg>
+        </div>
+
+        <!-- خلية 2: شكل q -->
+        <div class="cell" data-item="8" data-index="2" onclick="choose(this)">
+          <span class="cell-num">٢</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="64" y="15" width="12" height="70" fill="#222"/>
+            <rect x="29" y="15" width="35" height="10" fill="#222"/>
+            <rect x="29" y="44" width="35" height="10" fill="#222"/>
+            <rect x="29" y="15" width="10" height="39" fill="#222"/>
+          </svg>
+        </div>
+
+        <!-- خلية 3: شكل P الأصلي ← الصحيحة -->
+        <div class="cell" data-item="8" data-index="3" data-correct="true" onclick="choose(this)">
+          <span class="cell-num">٣</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="24" y="15" width="12" height="70" fill="#222"/>
+            <rect x="36" y="15" width="35" height="10" fill="#222"/>
+            <rect x="36" y="44" width="35" height="10" fill="#222"/>
+            <rect x="61" y="15" width="10" height="39" fill="#222"/>
+          </svg>
+        </div>
+
+        <!-- خلية 4: شكل q -->
+        <div class="cell" data-item="8" data-index="4" onclick="choose(this)">
+          <span class="cell-num">٤</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="64" y="15" width="12" height="70" fill="#222"/>
+            <rect x="29" y="15" width="35" height="10" fill="#222"/>
+            <rect x="29" y="44" width="35" height="10" fill="#222"/>
+            <rect x="29" y="15" width="10" height="39" fill="#222"/>
+          </svg>
+        </div>
+
+        <!-- خلية 5: شكل q -->
+        <div class="cell" data-item="8" data-index="5" onclick="choose(this)">
+          <span class="cell-num">٥</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="64" y="15" width="12" height="70" fill="#222"/>
+            <rect x="29" y="15" width="35" height="10" fill="#222"/>
+            <rect x="29" y="44" width="35" height="10" fill="#222"/>
+            <rect x="29" y="15" width="10" height="39" fill="#222"/>
+          </svg>
+        </div>
+
+        <!-- خلية 6: شكل q -->
+        <div class="cell" data-item="8" data-index="6" onclick="choose(this)">
+          <span class="cell-num">٦</span>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="64" y="15" width="12" height="70" fill="#222"/>
+            <rect x="29" y="15" width="35" height="10" fill="#222"/>
+            <rect x="29" y="44" width="35" height="10" fill="#222"/>
+            <rect x="29" y="15" width="10" height="39" fill="#222"/>
+          </svg>
+        </div>
+
+      </div>
+      <div class="result-msg" id="result-8"></div>
+    </div>
+
+    <!-- ══ شريط التنقل ══ -->
+    <div class="nav-bar">
+      <button class="btn-nav btn-prev" id="btnPrev" onclick="prevItem()" disabled>→ السابق</button>
+      <button class="btn-nav btn-reset" onclick="resetCurrent()">↺ إعادة</button>
+      <button class="btn-nav btn-next" id="btnNext" onclick="nextItem()" disabled>التالي ←</button>
+    </div>
+
+    <!-- ══ شاشة الإنهاء ══ -->
+    <div class="finish-screen" id="finishScreen">
+      <div class="finish-icon">🎉</div>
+      <h2>أحسنت! انتهيت من جميع بنود التحويلات الهندسية</h2>
+      <p>لقد أكملت جميع أقسام اختبار الحساسية للهندسة في الأشكال البصرية!</p>
+      <a href="../index.html" class="btn-home">العودة للرئيسية</a>
+    </div>
+
+  </div><!-- /card -->
+
+  <script src="../js/transform.js"></script>
+</body>
+</html>
