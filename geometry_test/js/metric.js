@@ -6,8 +6,7 @@
 var TOTAL_ITEMS = 8;
 var currentItem  = 1;
 var itemAnswered = { 1:false,2:false,3:false,4:false,5:false,6:false,7:false,8:false };
-
-var subNotes = {
+var geoCorrectCount = 0;
   1: "( السؤال يقيس القدرة على مقارنة <strong>أطوال القطع المستقيمة</strong> وتحديد الطول المختلف )",
   2: "( السؤال يقيس إدراك <strong>نسبة الطول للعرض</strong>: تحديد المستطيل الذي يختلف في نسبة أضلاعه )",
   3: "( السؤال يقيس إدراك <strong>نقطة المنتصف</strong>: تحديد القطعة التي لا تقع نقطتها في منتصفها الحقيقي )",
@@ -64,6 +63,7 @@ function choose(cell) {
   itemAnswered[item] = true;
 
   var isCorrect = cell.dataset.correct === "true";
+  if (isCorrect) geoCorrectCount++;
   var msg = document.getElementById("result-" + item);
   var fb  = feedback[item];
 
@@ -134,5 +134,6 @@ function showFinish() {
   document.querySelector(".sub-note").style.display    = "none";
   document.querySelector(".card-header").style.display = "none";
   document.querySelector(".domain-desc").style.display = "none";
+  geoEnhanceFinish('metric', geoCorrectCount, TOTAL_ITEMS);
   document.getElementById("finishScreen").classList.add("show");
 }

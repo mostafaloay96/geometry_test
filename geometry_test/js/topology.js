@@ -9,6 +9,7 @@
 var TOTAL_ITEMS = 4;
 var currentItem  = 1;
 var itemAnswered = { 1: false, 2: false, 3: false, 4: false };
+var geoCorrectCount = 0;
 
 // الملاحظة الديناميكية لكل بند (تظهر تحت السؤال)
 var subNotes = {
@@ -53,6 +54,7 @@ function choose(cell) {
   itemAnswered[item] = true;
 
   var isCorrect = cell.dataset.correct === "true";
+  if (isCorrect) geoCorrectCount++;
   var msg = document.getElementById("result-" + item);
   var fb  = feedback[item];
 
@@ -138,5 +140,6 @@ function showFinish() {
   document.querySelector(".sub-note").style.display    = "none";
   document.querySelector(".card-header").style.display = "none";
   document.querySelector(".domain-desc").style.display = "none";
+  geoEnhanceFinish('topology', geoCorrectCount, TOTAL_ITEMS);
   document.getElementById("finishScreen").classList.add("show");
 }

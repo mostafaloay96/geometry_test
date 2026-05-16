@@ -10,7 +10,8 @@
 const TOTAL_ITEMS = 2;
 
 var currentItem  = 1;           // البند الحالي
-var itemAnswered = { 1: false, 2: false };  // هل تمت الإجابة على كل بند
+var itemAnswered = { 1: false, 2: false };
+var geoCorrectCount = 0;  // هل تمت الإجابة على كل بند
 
 // رسائل التغذية الراجعة لكل بند
 var feedbackMessages = {
@@ -33,6 +34,7 @@ function choose(cell) {
   itemAnswered[item] = true;
 
   var isCorrect = cell.dataset.correct === "true";
+  if (isCorrect) geoCorrectCount++;
   var msg       = document.getElementById("result-" + item);
   var fb        = feedbackMessages[item];
 
@@ -133,6 +135,7 @@ function showFinish() {
   document.querySelector(".card-header").style.display = "none";
 
   // إظهار شاشة الإنهاء
+  geoEnhanceFinish('practice', geoCorrectCount, TOTAL_ITEMS);
   document.getElementById("finishScreen").classList.add("show");
 }
 

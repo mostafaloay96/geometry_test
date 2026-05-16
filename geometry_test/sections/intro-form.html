@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>بيانات المشارك – اختبار الحساسية للهندسة</title>
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/shared.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-icons@1.13.12/iconfont/material-icons.min.css">
+  <style>
+    body { background: #f4f6fb; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; }
+    .form-card {
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 4px 28px rgba(21,101,192,0.10);
+      padding: 36px 40px;
+      max-width: 520px;
+      width: 100%;
+    }
+    .form-header { text-align: center; margin-bottom: 28px; }
+    .form-header .fh-icon {
+      width: 64px; height: 64px; border-radius: 50%;
+      background: #e3f2fd; color: #1565c0;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 12px;
+      font-size: 32px;
+    }
+    .form-header h1 { font-size: 20px; color: #1a1a2e; margin: 0 0 4px; }
+    .form-header p  { font-size: 13px; color: #777; margin: 0; }
+
+    .form-group { margin-bottom: 18px; }
+    .form-group label {
+      display: block; font-size: 13px; font-weight: 700;
+      color: #444; margin-bottom: 6px;
+    }
+    .form-group label .req { color: #c62828; margin-right: 2px; }
+    .form-group input, .form-group select {
+      width: 100%; padding: 10px 14px;
+      border: 1.5px solid #dde3f4; border-radius: 8px;
+      font-size: 14px; font-family: inherit;
+      background: #fafbff; color: #222;
+      transition: border-color 0.2s;
+      box-sizing: border-box;
+    }
+    .form-group input:focus, .form-group select:focus {
+      outline: none; border-color: #1565c0; background: white;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+    .btn-start-test {
+      width: 100%; padding: 14px;
+      background: #1565c0; color: white;
+      border: none; border-radius: 10px;
+      font-size: 16px; font-weight: 700;
+      cursor: pointer; font-family: inherit;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      margin-top: 24px;
+      transition: filter 0.2s, transform 0.1s;
+    }
+    .btn-start-test:hover { filter: brightness(0.9); transform: scale(1.01); }
+    .btn-start-test:disabled { background: #aaa; cursor: not-allowed; transform: none; }
+
+    .note { font-size: 11px; color: #aaa; text-align: center; margin-top: 12px; }
+    .back-link { display: block; text-align: center; margin-top: 14px; font-size: 12px; color: #888; text-decoration: none; }
+    .back-link:hover { color: #1565c0; }
+
+    .privacy-note {
+      background: #f0f4ff; border-radius: 8px;
+      padding: 10px 14px; margin-bottom: 20px;
+      font-size: 12px; color: #555;
+      display: flex; align-items: flex-start; gap: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-card">
+    <div class="form-header">
+      <div class="fh-icon"><span class="material-icons">person</span></div>
+      <h1>بيانات المشارك</h1>
+      <p>يُرجى تعبئة البيانات التالية قبل بدء الاختبار</p>
+    </div>
+
+    <div class="privacy-note">
+      <span class="material-icons" style="font-size:16px;color:#1565c0;flex-shrink:0;margin-top:1px">lock</span>
+      <span>بياناتك محفوظة محلياً فقط على هذا الجهاز ولن تُرسل لأي جهة.</span>
+    </div>
+
+    <form id="participantForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label>الاسم (اختياري)</label>
+          <input type="text" id="pName" placeholder="مثال: أحمد" autocomplete="off">
+        </div>
+        <div class="form-group">
+          <label>العمر <span class="req">*</span></label>
+          <input type="number" id="pAge" min="3" max="65" placeholder="بالسنوات" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>الجنس <span class="req">*</span></label>
+          <select id="pGender" required>
+            <option value="">اختر...</option>
+            <option value="male">ذكر</option>
+            <option value="female">أنثى</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>المستوى الدراسي <span class="req">*</span></label>
+          <select id="pEducation" required>
+            <option value="">اختر...</option>
+            <option value="preschool">ما قبل المدرسة (3–5)</option>
+            <option value="primary">ابتدائي</option>
+            <option value="middle">متوسط</option>
+            <option value="high">ثانوي</option>
+            <option value="university">جامعي</option>
+            <option value="postgrad">دراسات عليا</option>
+            <option value="other">أخرى</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>التخصص / المهنة (اختياري)</label>
+        <input type="text" id="pSpeciality" placeholder="مثال: طالب، مهندس، معلم...">
+      </div>
+
+      <button type="submit" class="btn-start-test" id="btnStartTest">
+        <span class="material-icons">play_arrow</span>
+        ابدأ الاختبار
+      </button>
+    </form>
+
+    <p class="note">الحقول المعلّمة بـ <span style="color:#c62828">*</span> إلزامية</p>
+    <a href="../index.html" class="back-link">← العودة للصفحة الرئيسية</a>
+  </div>
+
+  <script>
+    // إذا كانت البيانات محفوظة مسبقاً، اعبّأها
+    (function() {
+      var p = JSON.parse(localStorage.getItem('geoParticipant') || '{}');
+      if (p.name)        document.getElementById('pName').value        = p.name;
+      if (p.age)         document.getElementById('pAge').value         = p.age;
+      if (p.gender)      document.getElementById('pGender').value      = p.gender;
+      if (p.education)   document.getElementById('pEducation').value   = p.education;
+      if (p.speciality)  document.getElementById('pSpeciality').value  = p.speciality;
+    })();
+
+    document.getElementById('participantForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var age  = parseInt(document.getElementById('pAge').value);
+      var gen  = document.getElementById('pGender').value;
+      var edu  = document.getElementById('pEducation').value;
+
+      if (!age || age < 3 || age > 65) { alert('يُرجى إدخال عمر صحيح بين 3 و65 سنة'); return; }
+      if (!gen)  { alert('يُرجى تحديد الجنس'); return; }
+      if (!edu)  { alert('يُرجى تحديد المستوى الدراسي'); return; }
+
+      // حفظ البيانات ومسح أي نتائج سابقة
+      localStorage.setItem('geoParticipant', JSON.stringify({
+        name:       document.getElementById('pName').value.trim(),
+        age:        age,
+        gender:     gen,
+        education:  edu,
+        speciality: document.getElementById('pSpeciality').value.trim(),
+        date:       new Date().toISOString()
+      }));
+      localStorage.removeItem('geoScores');
+      localStorage.removeItem('geoDone');
+
+      // الانتقال لأول قسم
+      window.location.href = 'practice-items.html';
+    });
+  </script>
+</body>
+</html>

@@ -5,14 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>البنود التدريبية – اختبار الحساسية للهندسة</title>
   <link rel="stylesheet" href="../css/practice-items.css" />
+  <link rel="stylesheet" href="../css/shared.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-icons@1.13.12/iconfont/material-icons.min.css">
 </head>
 <body>
+  <div id="geo-progress-bar" data-section="practice"></div>
 
   <!-- ══ شريط العودة ══ -->
   <nav class="topbar">
     <a href="../index.html" class="btn-back">← العودة للرئيسية</a>
-    <span class="section-label">البنود التدريبية – Practice Items</span>
-  </nav>
+    <span class="section-label">البنود التدريبية – Practice Items</span>    <div class="geo-timer-box"><span class="material-icons" style="font-size:14px">timer</span><span id="geo-timer">00:00</span></div>  </nav>
 
   <div class="card">
 
@@ -168,6 +170,7 @@
 
   </div><!-- /card -->
 
+  <script src="../js/geo-core.js"></script>
   <script src="../js/app.js"></script>
 </body>
 </html>

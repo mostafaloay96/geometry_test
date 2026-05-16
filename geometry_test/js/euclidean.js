@@ -10,6 +10,7 @@ var TOTAL_ITEMS = 8;
 var currentItem  = 1;
 var itemAnswered = { 1: false, 2: false, 3: false, 4: false,
                      5: false, 6: false, 7: false, 8: false };
+var geoCorrectCount = 0;
 
 // الملاحظة الديناميكية لكل بند
 var subNotes = {
@@ -74,6 +75,7 @@ function choose(cell) {
   itemAnswered[item] = true;
 
   var isCorrect = cell.dataset.correct === "true";
+  if (isCorrect) geoCorrectCount++;
   var msg = document.getElementById("result-" + item);
   var fb  = feedback[item];
 
@@ -154,5 +156,6 @@ function showFinish() {
   document.querySelector(".sub-note").style.display    = "none";
   document.querySelector(".card-header").style.display = "none";
   document.querySelector(".domain-desc").style.display = "none";
+  geoEnhanceFinish('euclidean', geoCorrectCount, TOTAL_ITEMS);
   document.getElementById("finishScreen").classList.add("show");
 }
