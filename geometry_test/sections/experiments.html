@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>التجارب البحثية – اختبار الحساسية للهندسة</title>
+  <link rel="stylesheet" href="../css/experiments.css" />
+</head>
+<body>
+
+  <!-- ══ شريط العودة ══ -->
+  <nav class="topbar">
+    <a href="../index.html" class="btn-back">← العودة للرئيسية</a>
+    <span class="section-label">التجارب البحثية – Research Experiments</span>
+  </nav>
+
+  <div class="exp-layout">
+
+    <!-- ══════════════════
+         الشريط الجانبي
+    ════════════════════ -->
+    <aside class="exp-sidebar">
+      <div class="sidebar-title">التجارب</div>
+
+      <button class="tab-btn exp2 active" id="tab-2" onclick="showExp(2)">
+        <span class="tab-num">٢</span>
+        <span class="tab-text">
+          <span>التجربة الثانية</span>
+          <span class="tab-sub">Experiment 2</span>
+        </span>
+      </button>
+
+      <button class="tab-btn exp3" id="tab-3" onclick="showExp(3)">
+        <span class="tab-num">٣</span>
+        <span class="tab-text">
+          <span>التجربة الثالثة</span>
+          <span class="tab-sub">Experiment 3</span>
+        </span>
+      </button>
+    </aside>
+
+    <!-- ══════════════════
+         المحتوى الرئيسي
+    ════════════════════ -->
+    <main class="exp-main">
+
+      <!-- ═══════════════════════════════════
+           التجربة الثانية
+      ══════════════════════════════════════ -->
+      <section id="exp-2" class="exp-section active">
+        <div class="exp-card exp2">
+          <div class="exp-header">
+            <span class="exp-badge exp2">Experiment 2</span>
+            <h2>التجربة الثانية</h2>
+          </div>
+
+          <div class="exp-info-grid">
+            <div class="info-card">
+              <span class="info-icon">👥</span>
+              <div>
+                <strong>المشاركون</strong>
+                <p>400 مشارك، أعمار 6–51 سنة (ولايتا ماساتشوستس ونيويورك)</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <span class="info-icon">🎓</span>
+              <div>
+                <strong>عينة خاصة</strong>
+                <p>82 مراهقاً (13–18 سنة) من مدرسة فنون متخصصة في ماساتشوستس</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <span class="info-icon">🎯</span>
+              <div>
+                <strong>المهمة</strong>
+                <p>نفس مهمة التجربة الأولى: تحديد الصورة المختلفة من بين 6 صور</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <span class="info-icon">📊</span>
+              <div>
+                <strong>الهدف الجديد</strong>
+                <p>دراسة الأنماط الثابتة والمتغيرة في الأداء عبر مراحل النمو</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-divider">ما الذي تضيفه عن التجربة الأولى؟</div>
+          <div class="info-card" style="margin-bottom:0">
+            <span class="info-icon">💡</span>
+            <div>
+              <strong>الإضافة المنهجية</strong>
+              <p style="margin-top:4px">بينما ركّزت التجربة الأولى على وجود الحساسية الهندسية، تسعى التجربة الثانية إلى تحديد <strong>أيّ المجالات تظل ثابتة عبر الأعمار</strong> (Stable) وأيّها يتطور بشكل أكبر مع النضج المعرفي (Variable). العينة الأكبر تتيح مقارنة إحصائية دقيقة بين الفئات العمرية.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ══════════════════════════════
+             المثال التطبيقي التفاعلي
+        ═══════════════════════════════ -->
+        <div class="demo-area">
+          <h3>🧪 مثال تطبيقي – من التجربة الثانية</h3>
+          <p class="demo-desc">
+            فيما يلي ثلاثة بنود تمثّل ثلاثة مستويات من الاستقرار التطوري: بند <strong>مستقر</strong> (أداء متقارب عبر الأعمار)، بند <strong>متوسط</strong> (يتحسن تدريجياً)، وبند <strong>متغير</strong> (يتطور بوضوح مع العمر). أجب على البنود الثلاثة ثم استعرض النتائج التنموية.
+          </p>
+
+          <!-- تبويبات البنود الثلاثة -->
+          <div class="demo-item-tabs">
+            <button class="demo-tab active" id="dtab-1" onclick="showDemoItem(1)">
+              بند ١ – مستقر
+            </button>
+            <button class="demo-tab" id="dtab-2" onclick="showDemoItem(2)">
+              بند ٢ – متوسط
+            </button>
+            <button class="demo-tab" id="dtab-3" onclick="showDemoItem(3)">
+              بند ٣ – متغير
+            </button>
+          </div>
+
+          <!-- ══════════════════
+               البند الأول – الطوبولوجيا (مستقر)
+               الصحيحة: خلية 4
+          ════════════════════ -->
+          <div id="demo-item-1" class="demo-item active">
+            <div class="demo-label">
+              المجال: الطوبولوجيا (Topology) |
+              <span class="stability stable">مستقر عبر الأعمار</span>
+              <span style="color:#aaa; font-size:10px; margin-right:auto">س / أي صورة تختلف عن البقية؟</span>
+            </div>
+            <div class="grid">
+
+              <!-- خلية 1: مخمس مغلق -->
+              <div class="cell" data-item="1" data-index="1" onclick="chooseDemo(this)">
+                <span class="cell-num">١</span>
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <polygon points="50,10 88,37 75,80 25,80 12,37" fill="#222"/>
+                </svg>
+              </div>
+
+              <!-- خلية 2: مخمس مغلق -->
+              <div class="cell" data-item="1" data-index="2" onclick="chooseDemo(this)">
+                <span class="cell-num">٢</span>
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <polygon points="50,10 88,37 75,80 25,80 12,37" fill="#222"/>
+                </svg>
+              </div>
+
+              <!-- خلية 3: مخمس مغلق -->
+              <div class="cell" data-item="1" data-index="3" onclick="chooseDemo(this)">
+                <span class="cell-num">٣</span>
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <polygon points="50,10 88,37 75,80 25,80 12,37" fill="#222"/>
+                </svg>
+              </div>
+
+              <!-- خلية 4: مخمس مفتوح ← الصحيحة -->
+              <div class="cell" data-item="1" data-index="4" data-correct="true" onclick="chooseDemo(this)">
+                <span class="cell-num">٤</span>
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <polyline points="88,37 75,80 25,80 12,37 50,10" fill="none" stroke="#222" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+
+              <!-- خلية 5: مخمس مغلق -->
+              <div class="cell" data-item="1" data-index="5" onclick="chooseDemo(this)">
+                <span class="cell-num">٥</span>
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <polygon points="50,10 88,37 75,80 25,80 12,37" fill="#222"/>
+                </svg>
+              </div>
+
+              <!-- خلية 6: مخمس مغلق -->
+              <div class="cell" data-item="1" data-index="6" onclick="chooseDemo(this)">
+                <span class="cell-num">٦</span>
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <polygon points="50,10 88,37 75,80 25,80 12,37" fill="#222"/>
+                </svg>
+              </div>
+
+            </div>
+            <div class="result-msg" id="demo-result-1"></div>
+          </div>
+
+          <!-- ══════════════════
+               البند الثاني – الهندسة الإقليدية (متوسط)
+               الصحيحة: خلية 3
+          ════════════════════ -->
+          <div id="demo-item-2" class="demo-item">
+            <div class="demo-label">
+              المجال: الهندسة الإقليدية (Euclidean Geometry) |
+              <span class="stability moderate">متوسط التطور</span>
+              <span style="color:#aaa; font-size:10px; margin-right:auto">س / أي صورة تختلف عن البقية؟</span>
+            </div>
+            <div class="grid">
+
+              <!-- خلية 1: زاوية قائمة (90°) -->
+              <div class="cell" data-item="2" data-index="1" onclick="chooseDemo(this)">
+                <span class="cell-num">١</span>
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <polyline points="15,85 15,15 85,15" fill="none" stroke="#222" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+
+              <!-- خلية 2: زاوية قائمة -->
+              <div class="cell" data-item="2" data-index="2" onclick="chooseDemo(this)">
+                <span class="cell-num">٢</span>
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <polyline points="15,85 15,15 85,15" fill="none" stroke="#222" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+
+              <!-- خلية 3: زاوية منفرجة (~120°) ← الصحيحة -->
+              <div class="cell" data-item="2" data-index="3" data-correct="true" onclick="chooseDemo(this)">
+                <span class="cell-num">٣</span>
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <polyline points="15,85 15,15 82,48" fill="none" stroke="#222" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+
+              <!-- خلية 4: زاوية قائمة -->
+              <div class="cell" data-item="2" data-index="4" onclick="chooseDemo(this)">
+                <span class="cell-num">٤</span>
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <polyline points="15,85 15,15 85,15" fill="none" stroke="#222" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+
+              <!-- خلية 5: زاوية قائمة -->
+              <div class="cell" data-item="2" data-index="5" onclick="chooseDemo(this)">
+                <span class="cell-num">٥</span>
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <polyline points="15,85 15,15 85,15" fill="none" stroke="#222" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+
+              <!-- خلية 6: زاوية قائمة -->
+              <div class="cell" data-item="2" data-index="6" onclick="chooseDemo(this)">
+                <span class="cell-num">٦</span>
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <polyline points="15,85 15,15 85,15" fill="none" stroke="#222" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+
+            </div>
+            <div class="result-msg" id="demo-result-2"></div>
+          </div>
+
+          <!-- ══════════════════
+               البند الثالث – الخصائص المترية (متغير)
+               الصحيحة: خلية 6
+          ════════════════════ -->
+          <div id="demo-item-3" class="demo-item">
+            <div class="demo-label">
+              المجال: الخصائص المترية (Metric Properties) |
+              <span class="stability variable">يتطور مع العمر</span>
+              <span style="color:#aaa; font-size:10px; margin-right:auto">س / أي صورة تختلف عن البقية؟</span>
+            </div>
+            <div class="grid">
+
+              <!-- خلية 1: ثلاث نقاط متساوية البُعد -->
+              <div class="cell" data-item="3" data-index="1" onclick="chooseDemo(this)">
+                <span class="cell-num">١</span>
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="18" cy="50" r="10" fill="#222"/>
+                  <circle cx="50" cy="50" r="10" fill="#222"/>
+                  <circle cx="82" cy="50" r="10" fill="#222"/>
+                </svg>
+              </div>
+
+              <!-- خلية 2: ثلاث نقاط متساوية البُعد -->
+              <div class="cell" data-item="3" data-index="2" onclick="chooseDemo(this)">
+                <span class="cell-num">٢</span>
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="18" cy="50" r="10" fill="#222"/>
+                  <circle cx="50" cy="50" r="10" fill="#222"/>
+                  <circle cx="82" cy="50" r="10" fill="#222"/>
+                </svg>
+              </div>
+
+              <!-- خلية 3: ثلاث نقاط متساوية البُعد -->
+              <div class="cell" data-item="3" data-index="3" onclick="chooseDemo(this)">
+                <span class="cell-num">٣</span>
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="18" cy="50" r="10" fill="#222"/>
+                  <circle cx="50" cy="50" r="10" fill="#222"/>
+                  <circle cx="82" cy="50" r="10" fill="#222"/>
+                </svg>
+              </div>
+
+              <!-- خلية 4: ثلاث نقاط متساوية البُعد -->
+              <div class="cell" data-item="3" data-index="4" onclick="chooseDemo(this)">
+                <span class="cell-num">٤</span>
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="18" cy="50" r="10" fill="#222"/>
+                  <circle cx="50" cy="50" r="10" fill="#222"/>
+                  <circle cx="82" cy="50" r="10" fill="#222"/>
+                </svg>
+              </div>
+
+              <!-- خلية 5: ثلاث نقاط متساوية البُعد -->
+              <div class="cell" data-item="3" data-index="5" onclick="chooseDemo(this)">
+                <span class="cell-num">٥</span>
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="18" cy="50" r="10" fill="#222"/>
+                  <circle cx="50" cy="50" r="10" fill="#222"/>
+                  <circle cx="82" cy="50" r="10" fill="#222"/>
+                </svg>
+              </div>
+
+              <!-- خلية 6: النقطة الوسطى منحازة يساراً ← الصحيحة -->
+              <div class="cell" data-item="3" data-index="6" data-correct="true" onclick="chooseDemo(this)">
+                <span class="cell-num">٦</span>
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="18" cy="50" r="10" fill="#222"/>
+                  <circle cx="38" cy="50" r="10" fill="#222"/>
+                  <circle cx="82" cy="50" r="10" fill="#222"/>
+                </svg>
+              </div>
+
+            </div>
+            <div class="result-msg" id="demo-result-3"></div>
+          </div>
+
+          <!-- ══════════════════
+               المخطط التنموي (يظهر بعد الإجابة على البنود الثلاثة)
+          ════════════════════ -->
+          <div id="dev-chart" class="dev-chart hidden">
+            <div class="dev-chart-title">📈 الأداء التنموي حسب الفئة العمرية – نتائج التجربة الثانية</div>
+
+            <div class="chart-legend">
+              <div class="legend-item">
+                <div class="legend-dot" style="background:#3f51b5"></div>
+                الطوبولوجيا (مستقر)
+              </div>
+              <div class="legend-item">
+                <div class="legend-dot" style="background:#00796b"></div>
+                الهندسة الإقليدية (متوسط)
+              </div>
+              <div class="legend-item">
+                <div class="legend-dot" style="background:#e65100"></div>
+                الخصائص المترية (متغير)
+              </div>
+            </div>
+
+            <div class="chart-rows">
+
+              <!-- 3–6 سنوات -->
+              <div class="chart-row">
+                <div class="age-label">3–6<br>سنوات</div>
+                <div class="bars">
+                  <div class="bar-row">
+                    <div class="bar" style="background:#3f51b5" data-pct="78"></div>
+                    <span class="bar-pct">78%</span>
+                  </div>
+                  <div class="bar-row">
+                    <div class="bar" style="background:#00796b" data-pct="62"></div>
+                    <span class="bar-pct">62%</span>
+                  </div>
+                  <div class="bar-row">
+                    <div class="bar" style="background:#e65100" data-pct="47"></div>
+                    <span class="bar-pct">47%</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 7–10 سنوات -->
+              <div class="chart-row">
+                <div class="age-label">7–10<br>سنوات</div>
+                <div class="bars">
+                  <div class="bar-row">
+                    <div class="bar" style="background:#3f51b5" data-pct="90"></div>
+                    <span class="bar-pct">90%</span>
+                  </div>
+                  <div class="bar-row">
+                    <div class="bar" style="background:#00796b" data-pct="79"></div>
+                    <span class="bar-pct">79%</span>
+                  </div>
+                  <div class="bar-row">
+                    <div class="bar" style="background:#e65100" data-pct="68"></div>
+                    <span class="bar-pct">68%</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 11–18 سنة -->
+              <div class="chart-row">
+                <div class="age-label">11–18<br>سنة</div>
+                <div class="bars">
+                  <div class="bar-row">
+                    <div class="bar" style="background:#3f51b5" data-pct="95"></div>
+                    <span class="bar-pct">95%</span>
+                  </div>
+                  <div class="bar-row">
+                    <div class="bar" style="background:#00796b" data-pct="87"></div>
+                    <span class="bar-pct">87%</span>
+                  </div>
+                  <div class="bar-row">
+                    <div class="bar" style="background:#e65100" data-pct="80"></div>
+                    <span class="bar-pct">80%</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- البالغون -->
+              <div class="chart-row">
+                <div class="age-label">البالغون<br>18–51</div>
+                <div class="bars">
+                  <div class="bar-row">
+                    <div class="bar" style="background:#3f51b5" data-pct="97"></div>
+                    <span class="bar-pct">97%</span>
+                  </div>
+                  <div class="bar-row">
+                    <div class="bar" style="background:#00796b" data-pct="93"></div>
+                    <span class="bar-pct">93%</span>
+                  </div>
+                  <div class="bar-row">
+                    <div class="bar" style="background:#e65100" data-pct="91"></div>
+                    <span class="bar-pct">91%</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="chart-score" id="demoScoreMsg"></div>
+          </div>
+
+        </div><!-- /demo-area -->
+      </section>
+
+      <!-- ═══════════════════════════════════
+           التجربة الثالثة
+      ══════════════════════════════════════ -->
+      <section id="exp-3" class="exp-section">
+        <div class="exp-card exp3">
+          <div class="exp-header">
+            <span class="exp-badge exp3">Experiment 3</span>
+            <h2>التجربة الثالثة</h2>
+          </div>
+
+          <div class="exp-info-grid">
+            <div class="info-card">
+              <span class="info-icon">👥</span>
+              <div>
+                <strong>المشاركون</strong>
+                <p>87 مشاركاً على 4 فئات عمرية (3–34 سنة)</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <span class="info-icon">🔬</span>
+              <div>
+                <strong>الأداة</strong>
+                <p>صور أكثر تنظيماً ومنهجية – تجارب نقية وتجارب تداخل</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <span class="info-icon">🎯</span>
+              <div>
+                <strong>الهدف</strong>
+                <p>مقارنة الحساسية لكل من: الطول، الزاوية، الاتجاه (يمين/يسار) بدقة</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <span class="info-icon">📊</span>
+              <div>
+                <strong>الإضافة</strong>
+                <p>دراسة الأهمية النسبية (البروز الإدراكي) لكل بُعد عبر مراحل النمو</p>
+              </div>
+            </div>
+          </div>
+        </div><!-- /exp-card -->
+
+        <!-- ══════════════════════════════════
+             المثال التطبيقي للتجربة الثالثة
+        ══════════════════════════════════════ -->
+        <div class="demo-area exp3-demo">
+          <h3>🧪 مثال تطبيقي – من التجربة الثالثة</h3>
+          <p class="demo-desc">
+            الشكل المستخدم: <strong>خط منكسر من قطعتين</strong> متصلتين عند رأس. يقيس كل بند الحساسية لبُعد: <strong>الطول – الزاوية – الاتجاه</strong>. اختبر القسمين: التجارب النقية (بُعد واحد فقط) ثم تجارب التداخل (بُعد مستهدف + مشتّت إضافي).
+          </p>
+
+          <!-- أزرار اختيار القسم -->
+          <div class="part-selector">
+            <button class="part-btn active" id="pbtn-pure" onclick="showPart('pure')">✅ التجارب النقية – Pure Trials</button>
+            <button class="part-btn"        id="pbtn-int"  onclick="showPart('int')">⚡ تجارب التداخل – Interference Trials</button>
+          </div>
+
+          <!-- ══ القسم الأول: التجارب النقية ══ -->
+          <div id="part-pure" class="demo-part active">
+            <p class="part-intro">
+              في كل بند يختلف الشكل الشاذ في <strong>بُعد واحد فقط</strong> (الزاوية، الطول، أو الاتجاه). لاحظ أن الزاوية الأسهل والاتجاه الأصعب.
+            </p>
+            <div class="demo-item-tabs">
+              <button class="demo-tab active" id="e3pt-1" onclick="showExp3Item('pure',1)">الزاوية فقط</button>
+              <button class="demo-tab"        id="e3pt-2" onclick="showExp3Item('pure',2)">الطول فقط</button>
+              <button class="demo-tab"        id="e3pt-3" onclick="showExp3Item('pure',3)">الاتجاه فقط</button>
+            </div>
+
+            <!-- ══ البند النقي ١: الزاوية فقط | الصحيحة: خلية 5 ══ -->
+            <div id="e3-pure-1" class="demo-item active">
+              <div class="demo-label">
+                البُعد: الزاوية فقط (Pure Angle) | <span class="stability stable">الأسهل تطورياً</span>
+                <span style="color:#aaa;font-size:10px;margin-right:auto">س / أي صورة تختلف؟</span>
+              </div>
+              <div class="grid">
+                <div class="cell" onclick="chooseExp3(this,'pure',1)" data-epart="pure" data-eitem="1" data-eindex="1">
+                  <span class="cell-num">١</span>
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="20,25 50,75 78,30" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="cell" onclick="chooseExp3(this,'pure',1)" data-epart="pure" data-eitem="1" data-eindex="2">
+                  <span class="cell-num">٢</span>
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="20,25 50,75 78,30" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="cell" onclick="chooseExp3(this,'pure',1)" data-epart="pure" data-eitem="1" data-eindex="3">
+                  <span class="cell-num">٣</span>
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="20,25 50,75 78,30" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="cell" onclick="chooseExp3(this,'pure',1)" data-epart="pure" data-eitem="1" data-eindex="4">
+                  <span class="cell-num">٤</span>
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="20,25 50,75 78,30" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <!-- خلية 5 – زاوية واسعة ~103° ← الصحيحة -->
+                <div class="cell" onclick="chooseExp3(this,'pure',1)" data-epart="pure" data-eitem="1" data-eindex="5" data-ecorrect="true">
+                  <span class="cell-num">٥</span>
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="12,45 50,75 88,45" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="cell" onclick="chooseExp3(this,'pure',1)" data-epart="pure" data-eitem="1" data-eindex="6">
+                  <span class="cell-num">٦</span>
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="20,25 50,75 78,30" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="result-msg" id="e3-pure-result-1"></div>
+            </div>
+
+            <!-- ══ البند النقي ٢: الطول فقط | الصحيحة: خلية 3 ══ -->
+            <div id="e3-pure-2" class="demo-item">
+              <div class="demo-label">
+                البُعد: الطول فقط (Pure Length) | <span class="stability moderate">متوسط التطور</span>
+                <span style="color:#aaa;font-size:10px;margin-right:auto">س / أي صورة تختلف؟</span>
+              </div>
+              <div class="grid">
+                <div class="cell" onclick="chooseExp3(this,'pure',2)" data-epart="pure" data-eitem="2" data-eindex="1">
+                  <span class="cell-num">١</span>
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="20,25 50,75 78,30" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="cell" onclick="chooseExp3(this,'pure',2)" data-epart="pure" data-eitem="2" data-eindex="2">
+                  <span class="cell-num">٢</span>
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="20,25 50,75 78,30" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <!-- خلية 3 – ذراع أيمن قصير جداً ← الصحيحة -->
+                <div class="cell" onclick="chooseExp3(this,'pure',2)" data-epart="pure" data-eitem="2" data-eindex="3" data-ecorrect="true">
+                  <span class="cell-num">٣</span>
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="20,25 50,75 61,58" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="cell" onclick="chooseExp3(this,'pure',2)" data-epart="pure" data-eitem="2" data-eindex="4">
+                  <span class="cell-num">٤</span>
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="20,25 50,75 78,30" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="cell" onclick="chooseExp3(this,'pure',2)" data-epart="pure" data-eitem="2" data-eindex="5">
+                  <span class="cell-num">٥</span>
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="20,25 50,75 78,30" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="cell" onclick="chooseExp3(this,'pure',2)" data-epart="pure" data-eitem="2" data-eindex="6">
+                  <span class="cell-num">٦</span>
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="20,25 50,75 78,30" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="result-msg" id="e3-pure-result-2"></div>
+            </div>
+
+            <!-- ══ البند النقي ٣: الاتجاه فقط | الصحيحة: خلية 6 ══ -->
+            <div id="e3-pure-3" class="demo-item">
+              <div class="demo-label">
+                البُعد: الاتجاه/الحيرالية فقط (Pure Sense) | <span class="stability variable">الأصعب تطورياً</span>
+                <span style="color:#aaa;font-size:10px;margin-right:auto">س / أي صورة تختلف؟</span>
+              </div>
+              <div class="grid">
+                <div class="cell" onclick="chooseExp3(this,'pure',3)" data-epart="pure" data-eitem="3" data-eindex="1">
+                  <span class="cell-num">١</span>
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="20,25 50,75 78,30" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="cell" onclick="chooseExp3(this,'pure',3)" data-epart="pure" data-eitem="3" data-eindex="2">
+                  <span class="cell-num">٢</span>
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="20,25 50,75 78,30" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="cell" onclick="chooseExp3(this,'pure',3)" data-epart="pure" data-eitem="3" data-eindex="3">
+                  <span class="cell-num">٣</span>
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="20,25 50,75 78,30" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="cell" onclick="chooseExp3(this,'pure',3)" data-epart="pure" data-eitem="3" data-eindex="4">
+                  <span class="cell-num">٤</span>
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="20,25 50,75 78,30" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="cell" onclick="chooseExp3(this,'pure',3)" data-epart="pure" data-eitem="3" data-eindex="5">
+                  <span class="cell-num">٥</span>
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="20,25 50,75 78,30" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <!-- خلية 6 – صورة مرآة ← الصحيحة -->
+                <div class="cell" onclick="chooseExp3(this,'pure',3)" data-epart="pure" data-eitem="3" data-eindex="6" data-ecorrect="true">
+                  <span class="cell-num">٦</span>
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="80,25 50,75 22,30" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="result-msg" id="e3-pure-result-3"></div>
+            </div>
+
+            <!-- مخطط التجارب النقية -->
+            <div id="e3-pure-chart" class="dev-chart hidden">
+              <div class="dev-chart-title">📊 الأداء في التجارب النقية حسب الفئة العمرية – التجربة الثالثة</div>
+              <div class="chart-legend">
+                <div class="legend-item"><div class="legend-dot" style="background:#6a1b9a"></div>الزاوية</div>
+                <div class="legend-item"><div class="legend-dot" style="background:#1565c0"></div>الطول</div>
+                <div class="legend-item"><div class="legend-dot" style="background:#c62828"></div>الاتجاه</div>
+              </div>
+              <div class="chart-rows">
+                <div class="chart-row">
+                  <div class="age-label">3–5<br>سنوات</div>
+                  <div class="bars">
+                    <div class="bar-row"><div class="bar" style="background:#6a1b9a" data-pct="78"></div><span class="bar-pct">78%</span></div>
+                    <div class="bar-row"><div class="bar" style="background:#1565c0" data-pct="52"></div><span class="bar-pct">52%</span></div>
+                    <div class="bar-row"><div class="bar" style="background:#c62828" data-pct="34"></div><span class="bar-pct">34%</span></div>
+                  </div>
+                </div>
+                <div class="chart-row">
+                  <div class="age-label">7–8<br>سنوات</div>
+                  <div class="bars">
+                    <div class="bar-row"><div class="bar" style="background:#6a1b9a" data-pct="88"></div><span class="bar-pct">88%</span></div>
+                    <div class="bar-row"><div class="bar" style="background:#1565c0" data-pct="68"></div><span class="bar-pct">68%</span></div>
+                    <div class="bar-row"><div class="bar" style="background:#c62828" data-pct="50"></div><span class="bar-pct">50%</span></div>
+                  </div>
+                </div>
+                <div class="chart-row">
+                  <div class="age-label">10–11<br>سنة</div>
+                  <div class="bars">
+                    <div class="bar-row"><div class="bar" style="background:#6a1b9a" data-pct="93"></div><span class="bar-pct">93%</span></div>
+                    <div class="bar-row"><div class="bar" style="background:#1565c0" data-pct="79"></div><span class="bar-pct">79%</span></div>
+                    <div class="bar-row"><div class="bar" style="background:#c62828" data-pct="65"></div><span class="bar-pct">65%</span></div>
+                  </div>
+                </div>
+                <div class="chart-row">
+                  <div class="age-label">البالغون<br>18–34</div>
+                  <div class="bars">
+                    <div class="bar-row"><div class="bar" style="background:#6a1b9a" data-pct="97"></div><span class="bar-pct">97%</span></div>
+                    <div class="bar-row"><div class="bar" style="background:#1565c0" data-pct="91"></div><span class="bar-pct">91%</span></div>
+                    <div class="bar-row"><div class="bar" style="background:#c62828" data-pct="82"></div><span class="bar-pct">82%</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="chart-score" id="e3-pure-score"></div>
+            </div>
+          </div><!-- /part-pure -->
+
+          <!-- ══ القسم الثاني: تجارب التداخل ══ -->
+          <div id="part-int" class="demo-part">
+            <p class="part-intro int-intro">
+              في تجارب التداخل يختلف الشكل الشاذ في البُعد <strong>الهدف</strong>، لكنه يختلف أيضاً في بُعد <strong>مشتّت</strong>. ركّز على البُعد المحدد وتجاهل المشتّت.
+            </p>
+            <div class="demo-item-tabs">
+              <button class="demo-tab active" id="e3it-1" onclick="showExp3Item('int',1)">زاوية + طول</button>
+              <button class="demo-tab"        id="e3it-2" onclick="showExp3Item('int',2)">طول + زاوية</button>
+              <button class="demo-tab"        id="e3it-3" onclick="showExp3Item('int',3)">اتجاه + طول</button>
+            </div>
+
+            <!-- ══ التداخل ١: زاوية هدف + طول مشتّت | الصحيحة: خلية 4 ══ -->
+            <div id="e3-int-1" class="demo-item active">
+              <div class="demo-label">
+                الهدف: الزاوية | المشتّت: الطول | <span class="stability stable">هدف أسهل</span>
+                <span style="color:#aaa;font-size:10px;margin-right:auto">س / أي صورة زاويتها مختلفة؟</span>
+              </div>
+              <div class="grid">
+                <div class="cell" onclick="chooseExp3(this,'int',1)" data-epart="int" data-eitem="1" data-eindex="1">
+                  <span class="cell-num">١</span>
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="20,25 50,75 78,30" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="cell" onclick="chooseExp3(this,'int',1)" data-epart="int" data-eitem="1" data-eindex="2">
+                  <span class="cell-num">٢</span>
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="20,25 50,75 78,30" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="cell" onclick="chooseExp3(this,'int',1)" data-epart="int" data-eitem="1" data-eindex="3">
+                  <span class="cell-num">٣</span>
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="20,25 50,75 78,30" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <!-- خلية 4 – زاوية واسعة + ذراع أيسر أقصر ← الصحيحة -->
+                <div class="cell" onclick="chooseExp3(this,'int',1)" data-epart="int" data-eitem="1" data-eindex="4" data-ecorrect="true">
+                  <span class="cell-num">٤</span>
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="22,50 50,75 88,45" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="cell" onclick="chooseExp3(this,'int',1)" data-epart="int" data-eitem="1" data-eindex="5">
+                  <span class="cell-num">٥</span>
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="20,25 50,75 78,30" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="cell" onclick="chooseExp3(this,'int',1)" data-epart="int" data-eitem="1" data-eindex="6">
+                  <span class="cell-num">٦</span>
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="20,25 50,75 78,30" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="result-msg" id="e3-int-result-1"></div>
+            </div>
+
+            <!-- ══ التداخل ٢: طول هدف + زاوية مشتّتة | الصحيحة: خلية 3 ══ -->
+            <div id="e3-int-2" class="demo-item">
+              <div class="demo-label">
+                الهدف: الطول | المشتّت: الزاوية | <span class="stability moderate">هدف متوسط</span>
+                <span style="color:#aaa;font-size:10px;margin-right:auto">س / أي صورة نسبة ذراعيها مختلفة؟</span>
+              </div>
+              <div class="grid">
+                <div class="cell" onclick="chooseExp3(this,'int',2)" data-epart="int" data-eitem="2" data-eindex="1">
+                  <span class="cell-num">١</span>
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="20,25 50,75 78,30" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="cell" onclick="chooseExp3(this,'int',2)" data-epart="int" data-eitem="2" data-eindex="2">
+                  <span class="cell-num">٢</span>
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="20,25 50,75 78,30" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <!-- خلية 3 – ذراع أيسر أقصر بكثير + زاوية مختلفة ← الصحيحة -->
+                <div class="cell" onclick="chooseExp3(this,'int',2)" data-epart="int" data-eitem="2" data-eindex="3" data-ecorrect="true">
+                  <span class="cell-num">٣</span>
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="33,42 50,75 72,24" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="cell" onclick="chooseExp3(this,'int',2)" data-epart="int" data-eitem="2" data-eindex="4">
+                  <span class="cell-num">٤</span>
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="20,25 50,75 78,30" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="cell" onclick="chooseExp3(this,'int',2)" data-epart="int" data-eitem="2" data-eindex="5">
+                  <span class="cell-num">٥</span>
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="20,25 50,75 78,30" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="cell" onclick="chooseExp3(this,'int',2)" data-epart="int" data-eitem="2" data-eindex="6">
+                  <span class="cell-num">٦</span>
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="20,25 50,75 78,30" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="result-msg" id="e3-int-result-2"></div>
+            </div>
+
+            <!-- ══ التداخل ٣: اتجاه هدف + طول مشتّت | الصحيحة: خلية 2 ══ -->
+            <div id="e3-int-3" class="demo-item">
+              <div class="demo-label">
+                الهدف: الاتجاه | المشتّت: الطول | <span class="stability variable">الأصعب – هدف صعب</span>
+                <span style="color:#aaa;font-size:10px;margin-right:auto">س / أي صورة اتجاهها معاكس للبقية؟</span>
+              </div>
+              <div class="grid">
+                <div class="cell" onclick="chooseExp3(this,'int',3)" data-epart="int" data-eitem="3" data-eindex="1">
+                  <span class="cell-num">١</span>
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="20,25 50,75 78,30" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <!-- خلية 2 – مرآة + ذراع أيمن أطول بكثير ← الصحيحة -->
+                <div class="cell" onclick="chooseExp3(this,'int',3)" data-epart="int" data-eitem="3" data-eindex="2" data-ecorrect="true">
+                  <span class="cell-num">٢</span>
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="88,10 50,75 22,30" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="cell" onclick="chooseExp3(this,'int',3)" data-epart="int" data-eitem="3" data-eindex="3">
+                  <span class="cell-num">٣</span>
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="20,25 50,75 78,30" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="cell" onclick="chooseExp3(this,'int',3)" data-epart="int" data-eitem="3" data-eindex="4">
+                  <span class="cell-num">٤</span>
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="20,25 50,75 78,30" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="cell" onclick="chooseExp3(this,'int',3)" data-epart="int" data-eitem="3" data-eindex="5">
+                  <span class="cell-num">٥</span>
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="20,25 50,75 78,30" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="cell" onclick="chooseExp3(this,'int',3)" data-epart="int" data-eitem="3" data-eindex="6">
+                  <span class="cell-num">٦</span>
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="20,25 50,75 78,30" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="result-msg" id="e3-int-result-3"></div>
+            </div>
+
+            <!-- مخطط تجارب التداخل مقارنةً بالنقية -->
+            <div id="e3-int-chart" class="dev-chart hidden">
+              <div class="dev-chart-title">📊 الأداء: التجارب النقية مقابل تجارب التداخل – التجربة الثالثة</div>
+              <div class="chart-legend">
+                <div class="legend-item"><div class="legend-dot" style="background:#6a1b9a"></div>زاوية – نقي</div>
+                <div class="legend-item"><div class="legend-dot" style="background:#ab47bc"></div>زاوية – تداخل</div>
+                <div class="legend-item"><div class="legend-dot" style="background:#1565c0"></div>طول – نقي</div>
+                <div class="legend-item"><div class="legend-dot" style="background:#5c9cd8"></div>طول – تداخل</div>
+                <div class="legend-item"><div class="legend-dot" style="background:#c62828"></div>اتجاه – نقي</div>
+                <div class="legend-item"><div class="legend-dot" style="background:#ef9a9a"></div>اتجاه – تداخل</div>
+              </div>
+              <div class="chart-rows">
+                <div class="chart-row">
+                  <div class="age-label">3–5<br>سنوات</div>
+                  <div class="bars">
+                    <div class="bar-row"><div class="bar" style="background:#6a1b9a" data-pct="78"></div><span class="bar-pct">78%</span></div>
+                    <div class="bar-row"><div class="bar" style="background:#ab47bc" data-pct="68"></div><span class="bar-pct">68%</span></div>
+                    <div class="bar-row"><div class="bar" style="background:#1565c0" data-pct="52"></div><span class="bar-pct">52%</span></div>
+                    <div class="bar-row"><div class="bar" style="background:#5c9cd8" data-pct="38"></div><span class="bar-pct">38%</span></div>
+                    <div class="bar-row"><div class="bar" style="background:#c62828" data-pct="34"></div><span class="bar-pct">34%</span></div>
+                    <div class="bar-row"><div class="bar" style="background:#ef9a9a" data-pct="26"></div><span class="bar-pct">26%</span></div>
+                  </div>
+                </div>
+                <div class="chart-row">
+                  <div class="age-label">7–8<br>سنوات</div>
+                  <div class="bars">
+                    <div class="bar-row"><div class="bar" style="background:#6a1b9a" data-pct="88"></div><span class="bar-pct">88%</span></div>
+                    <div class="bar-row"><div class="bar" style="background:#ab47bc" data-pct="80"></div><span class="bar-pct">80%</span></div>
+                    <div class="bar-row"><div class="bar" style="background:#1565c0" data-pct="68"></div><span class="bar-pct">68%</span></div>
+                    <div class="bar-row"><div class="bar" style="background:#5c9cd8" data-pct="55"></div><span class="bar-pct">55%</span></div>
+                    <div class="bar-row"><div class="bar" style="background:#c62828" data-pct="50"></div><span class="bar-pct">50%</span></div>
+                    <div class="bar-row"><div class="bar" style="background:#ef9a9a" data-pct="40"></div><span class="bar-pct">40%</span></div>
+                  </div>
+                </div>
+                <div class="chart-row">
+                  <div class="age-label">10–11<br>سنة</div>
+                  <div class="bars">
+                    <div class="bar-row"><div class="bar" style="background:#6a1b9a" data-pct="93"></div><span class="bar-pct">93%</span></div>
+                    <div class="bar-row"><div class="bar" style="background:#ab47bc" data-pct="90"></div><span class="bar-pct">90%</span></div>
+                    <div class="bar-row"><div class="bar" style="background:#1565c0" data-pct="79"></div><span class="bar-pct">79%</span></div>
+                    <div class="bar-row"><div class="bar" style="background:#5c9cd8" data-pct="70"></div><span class="bar-pct">70%</span></div>
+                    <div class="bar-row"><div class="bar" style="background:#c62828" data-pct="65"></div><span class="bar-pct">65%</span></div>
+                    <div class="bar-row"><div class="bar" style="background:#ef9a9a" data-pct="54"></div><span class="bar-pct">54%</span></div>
+                  </div>
+                </div>
+                <div class="chart-row">
+                  <div class="age-label">البالغون<br>18–34</div>
+                  <div class="bars">
+                    <div class="bar-row"><div class="bar" style="background:#6a1b9a" data-pct="97"></div><span class="bar-pct">97%</span></div>
+                    <div class="bar-row"><div class="bar" style="background:#ab47bc" data-pct="95"></div><span class="bar-pct">95%</span></div>
+                    <div class="bar-row"><div class="bar" style="background:#1565c0" data-pct="91"></div><span class="bar-pct">91%</span></div>
+                    <div class="bar-row"><div class="bar" style="background:#5c9cd8" data-pct="84"></div><span class="bar-pct">84%</span></div>
+                    <div class="bar-row"><div class="bar" style="background:#c62828" data-pct="82"></div><span class="bar-pct">82%</span></div>
+                    <div class="bar-row"><div class="bar" style="background:#ef9a9a" data-pct="72"></div><span class="bar-pct">72%</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="chart-score" id="e3-int-score"></div>
+            </div>
+
+          </div><!-- /part-int -->
+
+        </div><!-- /exp3-demo -->
+      </section>
+
+    </main>
+  </div><!-- /exp-layout -->
+
+  <script src="../js/experiments.js"></script>
+</body>
+</html>

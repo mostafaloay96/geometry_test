@@ -185,10 +185,47 @@ body {
 .card-transform  { --accent: #1565c0; }
 
 /* ══════════════════════════════════════
+   Experiments Link Banner
+══════════════════════════════════════ */
+.exp-link-banner {
+  width: 100%;
+  max-width: 960px;
+  margin-top: 24px;
+}
+.exp-link-inner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: white;
+  border: 1.5px solid #c5cae9;
+  border-radius: 12px;
+  padding: 16px 22px;
+  box-shadow: 0 2px 10px rgba(40,53,147,0.08);
+  border-right: 4px solid #283593;
+}
+.exp-link-icon { font-size: 28px; flex-shrink: 0; }
+.exp-link-text { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+.exp-link-text strong { font-size: 14px; color: #1a1a2e; }
+.exp-link-text span { font-size: 12px; color: #666; line-height: 1.5; }
+.exp-link-btn {
+  background: #283593;
+  color: white;
+  text-decoration: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: filter 0.2s;
+  flex-shrink: 0;
+}
+.exp-link-btn:hover { filter: brightness(0.88); }
+
+/* ══════════════════════════════════════
    Footer
 ══════════════════════════════════════ */
 .footer {
-  margin-top: 48px;
+  margin-top: 32px;
   font-size: 12px;
   color: #aaa;
   text-align: center;
