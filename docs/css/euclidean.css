@@ -297,3 +297,85 @@ body {
   from { opacity: 0; transform: translateY(12px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+
+/* ══ Responsive – Phones ══ */
+@media (max-width: 480px) {
+  body { padding: 8px 8px 20px; }
+
+  .topbar {
+    padding: 6px 8px;
+    gap: 4px;
+  }
+  .section-label {
+    font-size: 11px;
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .card {
+    padding: 16px 12px;
+    border-radius: 10px;
+  }
+
+  .card-header {
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .domain-desc {
+    font-size: 12px;
+    padding: 10px 12px;
+  }
+
+  .question {
+    font-size: 15px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+  }
+
+  .instruction {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+
+  .grid {
+    gap: 6px;
+  }
+
+  .cell {
+    min-height: 76px;
+  }
+
+  .nav-bar {
+    gap: 6px;
+    margin-top: 6px;
+  }
+
+  .btn-nav {
+    padding: 11px 8px;
+    font-size: 13px;
+    min-height: 44px;
+  }
+
+  .finish-screen {
+    padding: 20px 0 8px;
+  }
+  .finish-icon { font-size: 40px; }
+  .finish-screen h2 { font-size: 17px; }
+  .finish-screen p  { font-size: 13px; }
+
+  .btn-home {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 13px;
+  }
+
+  /* شريط التقدم الداخلي للبنود – 8 خطوات
+     8×22px + 7×10px = 176+70 = 246px ✓ */
+  .progress-bar { overflow-x: auto; }
+  .progress-step { width: 22px; height: 22px; font-size: 10px; }
+  .progress-line { width: 10px; }
+}

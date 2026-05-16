@@ -30,12 +30,13 @@
       .profile-btn {
         position:absolute; top:14px; left:16px;
         display:inline-flex; align-items:center; gap:6px;
-        background:rgba(255,255,255,0.15); border:1.5px solid rgba(255,255,255,0.3);
+        background:#1565c0; border:1.5px solid #0d47a1;
         color:white; border-radius:24px; padding:7px 16px;
         font-size:13px; font-weight:600; cursor:pointer;
         font-family:inherit; transition:background .2s;
+        box-shadow: 0 2px 8px rgba(21,101,192,0.25);
       }
-      .profile-btn:hover { background:rgba(255,255,255,0.26); }
+      .profile-btn:hover { background:#1976d2; }
       .profile-btn .material-icons { font-size:18px; }
 
       /* ── Modal ── */
@@ -105,6 +106,20 @@
       }
       .geo-toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
       .geo-toast .material-icons { font-size:18px; }
+
+      @media (max-width: 480px) {
+        /* Start banner stacks on phones */
+        .start-banner { padding: 12px 14px !important; }
+        .start-banner-inner { flex-direction: column !important; gap: 10px !important; align-items: stretch !important; }
+        .start-banner-inner > div { min-width: unset !important; }
+        .btn-start-all, .btn-results { justify-content: center !important; }
+        .btn-reset-banner { justify-content: center; }
+        /* Profile button */
+        .profile-btn { top: 12px !important; left: 10px !important; padding: 5px 10px !important; font-size: 11px !important; }
+        .profile-btn .material-icons { font-size: 16px !important; }
+        /* Toast */
+        .geo-toast { white-space: normal !important; text-align: center; width: calc(100% - 32px) !important; font-size: 13px !important; }
+      }
     </style>
 </head>
 

@@ -163,3 +163,122 @@
     padding: 2px 8px;
   }
 }
+
+/* ── الهواتف (≤ 480px) ── */
+@media (max-width: 480px) {
+  body {
+    padding: 10px 8px 24px !important;
+  }
+
+  /* شريط التقدم العلوي */
+  #geo-progress-bar {
+    padding: 6px 8px;
+  }
+  .gpbar-dot {
+    width: 20px;
+    height: 20px;
+    font-size: 9px;
+  }
+  .gpbar-label {
+    display: none;          /* إخفاء التسميات على الهاتف لتوفير المساحة */
+  }
+  .gpbar-step {
+    min-width: 24px;        /* 8 خطوات × 24px + 7 خطوط × 6px = 234px ✓ */
+  }
+  .gpbar-line {
+    min-width: 6px;
+  }
+  .gpbar-inner {
+    min-width: unset;       /* إلغاء max-content حتى يلتف داخل الشاشة */
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  /* الشريط العلوي للقسم */
+  .topbar {
+    padding: 6px 8px;
+    gap: 4px;
+  }
+  .btn-back {
+    font-size: 12px !important;
+    padding: 5px 10px !important;
+  }
+  .section-label {
+    font-size: 11px !important;
+    flex: 1;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /* البطاقة الرئيسية */
+  .card {
+    padding: 16px 12px !important;
+    border-radius: 10px !important;
+  }
+
+  /* شبكة الأشكال */
+  .grid {
+    gap: 6px !important;
+  }
+  .cell {
+    min-height: 76px !important;
+    border-radius: 6px !important;
+  }
+
+  /* أزرار التنقل */
+  .nav-bar {
+    gap: 6px !important;
+  }
+  .btn-nav {
+    min-height: 44px !important;
+    font-size: 13px !important;
+    padding: 10px 8px !important;
+    border-radius: 8px !important;
+  }
+
+  /* السؤال */
+  .question {
+    font-size: 15px !important;
+    padding: 10px 12px !important;
+  }
+
+  /* وصف القسم */
+  .domain-desc {
+    font-size: 12px !important;
+    padding: 10px 12px !important;
+  }
+
+  /* شاشة الإنهاء */
+  .finish-screen h2 {
+    font-size: 17px !important;
+  }
+
+  /* حلقة الدرجة */
+  .fs-ring {
+    width: 90px;
+    height: 90px;
+  }
+  .fs-num {
+    font-size: 28px;
+  }
+  .fs-total, .fs-sep {
+    font-size: 16px;
+  }
+
+  /* زر القسم التالي */
+  .btn-next-section {
+    width: 100%;
+    justify-content: center;
+    margin: 6px 0 0;
+    padding: 13px 16px;
+    font-size: 15px;
+  }
+
+  /* المؤقت الزمني */
+  .geo-timer-box {
+    font-size: 11px;
+    padding: 2px 7px;
+  }
+}
