@@ -132,6 +132,24 @@
 }
 .btn-next-section:hover { filter: brightness(0.88); }
 
+/* ── صور البنود (مقتطعة من ملف الأداة) ── */
+.cell { overflow: hidden; }
+/* same left-to-right cell order as the source sheet */
+.grid:has(.item-img) { direction: ltr; }
+.cell .item-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
+.cell .number, .cell .cell-num { z-index: 1; }
+.cell.selected-correct:has(.item-img) { box-shadow: 0 0 0 3px #43a047; }
+.cell.selected-wrong:has(.item-img)   { box-shadow: 0 0 0 3px #e53935; }
+
 /* ── تلوين خطوات التقدم حسب الإجابة ── */
 .progress-step.step-correct { background: #2e7d32 !important; color: white !important; }
 .progress-step.step-wrong   { background: #c62828 !important; color: white !important; }

@@ -45,113 +45,77 @@
     <div class="question">س / "أي صورة تختلف عن البقية؟"</div>
     <p class="instruction">انقر على الصورة التي تبدو مختلفة عن بقية الصور</p>
 
-    <!-- ══════════════════════════════════════
-         البند الأول
-    ════════════════════════════════════════ -->
+    <!-- البند الأول – اللون (Color) – بند 1 في الملف -->
     <div class="item-block active" id="item-1">
       <div class="grid">
-
         <div class="cell" data-item="1" data-index="1" onclick="choose(this)">
           <span class="number">١</span>
-          <div class="shape-outer">
-            <div class="shape-inner-empty" style="width:35%;height:35%;"></div>
-          </div>
+          <img class="item-img" src="../img/items/01-1.png" alt="الصورة ١" draggable="false" />
         </div>
 
         <div class="cell" data-item="1" data-index="2" onclick="choose(this)">
           <span class="number">٢</span>
-          <div class="shape-outer">
-            <div class="shape-inner-empty" style="width:50%;height:45%;"></div>
-          </div>
+          <img class="item-img" src="../img/items/01-2.png" alt="الصورة ٢" draggable="false" />
         </div>
 
         <div class="cell" data-item="1" data-index="3" onclick="choose(this)">
           <span class="number">٣</span>
-          <div class="shape-outer" style="align-items:flex-start;justify-content:flex-end;padding:6px;">
-            <div class="shape-inner-empty" style="width:35%;height:35%;"></div>
-          </div>
+          <img class="item-img" src="../img/items/01-3.png" alt="الصورة ٣" draggable="false" />
         </div>
 
-        <!-- الإجابة الصحيحة: مربع مملوء -->
         <div class="cell" data-item="1" data-index="4" data-correct="true" onclick="choose(this)">
           <span class="number">٤</span>
-          <div class="shape-outer">
-            <div class="shape-inner-filled" style="width:45%;height:45%;"></div>
-          </div>
+          <img class="item-img" src="../img/items/01-4.png" alt="الصورة ٤" draggable="false" />
         </div>
 
         <div class="cell" data-item="1" data-index="5" onclick="choose(this)">
           <span class="number">٥</span>
-          <div class="shape-outer">
-            <div class="shape-inner-empty" style="width:50%;height:35%;"></div>
-          </div>
+          <img class="item-img" src="../img/items/01-5.png" alt="الصورة ٥" draggable="false" />
         </div>
 
         <div class="cell" data-item="1" data-index="6" onclick="choose(this)">
           <span class="number">٦</span>
-          <div class="shape-outer">
-            <div class="shape-inner-empty" style="width:55%;height:30%;"></div>
-          </div>
+          <img class="item-img" src="../img/items/01-6.png" alt="الصورة ٦" draggable="false" />
         </div>
-
       </div>
       <div class="result-msg" id="result-1"></div>
     </div>
 
-
-    <!-- ══════════════════════════════════════
-         البند الثاني
-    ════════════════════════════════════════ -->
+    <!-- البند الثاني – الاتجاه (Orientation) – بند 2 في الملف -->
     <div class="item-block" id="item-2">
       <div class="grid">
-
         <div class="cell" data-item="2" data-index="1" onclick="choose(this)">
           <span class="number">١</span>
-          <div class="shape-outer">
-            <div class="shape-bar-vertical"></div>
-          </div>
+          <img class="item-img" src="../img/items/02-1.png" alt="الصورة ١" draggable="false" />
         </div>
 
         <div class="cell" data-item="2" data-index="2" onclick="choose(this)">
           <span class="number">٢</span>
-          <div class="shape-outer">
-            <div class="shape-bar-vertical"></div>
-          </div>
+          <img class="item-img" src="../img/items/02-2.png" alt="الصورة ٢" draggable="false" />
         </div>
 
-        <!-- الإجابة الصحيحة: شريط مائل -->
         <div class="cell" data-item="2" data-index="3" data-correct="true" onclick="choose(this)">
           <span class="number">٣</span>
-          <div class="shape-outer">
-            <div class="shape-bar-diagonal"></div>
-          </div>
+          <img class="item-img" src="../img/items/02-3.png" alt="الصورة ٣" draggable="false" />
         </div>
 
         <div class="cell" data-item="2" data-index="4" onclick="choose(this)">
           <span class="number">٤</span>
-          <div class="shape-outer">
-            <div class="shape-bar-vertical"></div>
-          </div>
+          <img class="item-img" src="../img/items/02-4.png" alt="الصورة ٤" draggable="false" />
         </div>
 
         <div class="cell" data-item="2" data-index="5" onclick="choose(this)">
           <span class="number">٥</span>
-          <div class="shape-outer">
-            <div class="shape-bar-vertical"></div>
-          </div>
+          <img class="item-img" src="../img/items/02-5.png" alt="الصورة ٥" draggable="false" />
         </div>
 
         <div class="cell" data-item="2" data-index="6" onclick="choose(this)">
           <span class="number">٦</span>
-          <div class="shape-outer">
-            <div class="shape-bar-vertical"></div>
-          </div>
+          <img class="item-img" src="../img/items/02-6.png" alt="الصورة ٦" draggable="false" />
         </div>
-
       </div>
       <div class="result-msg" id="result-2"></div>
     </div>
-
 
     <!-- ══ شريط التنقل ══ -->
     <div class="nav-bar">

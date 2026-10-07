@@ -49,534 +49,293 @@
 
     <!-- ══ السؤال ══ -->
     <div class="question">س / "أي صورة تختلف عن البقية؟"</div>
-    <p class="sub-note" id="subNote">( السؤال يقيس القدرة على تحديد الشكل الذي لا يعد من <strong>التوازي</strong> ضمن مجال الهندسة الإقليدية )</p>
+    <p class="sub-note" id="subNote">( السؤال يقيس القدرة على تحديد الشكل المختلف في <strong>الخط المستقيم</strong> ضمن مجال الهندسة الإقليدية )</p>
     <p class="instruction">انقر على الصورة التي تبدو مختلفة عن بقية الصور</p>
 
-    <!-- ══════════════════════════════════════
-         البند الأول – التوازي (Parallelism)
-         الصحيحة: خلية 3 (خطان يتقاطعان – غير متوازيين)
-    ════════════════════════════════════════ -->
+    <!-- البند الأول – الخط المستقيم (Straight line) – بند 7 في الملف -->
     <div class="item-block active" id="item-1">
       <div class="grid">
-
-        <!-- خلية 1: خطان أفقيان متوازيان -->
         <div class="cell" data-item="1" data-index="1" onclick="choose(this)">
           <span class="cell-num">١</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <line x1="15" y1="35" x2="85" y2="35" stroke="#222" stroke-width="4" stroke-linecap="round"/>
-            <line x1="15" y1="65" x2="85" y2="65" stroke="#222" stroke-width="4" stroke-linecap="round"/>
-          </svg>
+          <img class="item-img" src="../img/items/07-1.png" alt="الصورة ١" draggable="false" />
         </div>
 
-        <!-- خلية 2: خطان قطريان متوازيان (/) -->
-        <div class="cell" data-item="1" data-index="2" onclick="choose(this)">
+        <div class="cell" data-item="1" data-index="2" data-correct="true" onclick="choose(this)">
           <span class="cell-num">٢</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <line x1="25" y1="80" x2="55" y2="20" stroke="#222" stroke-width="4" stroke-linecap="round"/>
-            <line x1="45" y1="80" x2="75" y2="20" stroke="#222" stroke-width="4" stroke-linecap="round"/>
-          </svg>
+          <img class="item-img" src="../img/items/07-2.png" alt="الصورة ٢" draggable="false" />
         </div>
 
-        <!-- خلية 3: خطان يتقاطعان في نقطة (غير متوازيين) ← الصحيحة -->
-        <div class="cell" data-item="1" data-index="3" data-correct="true" onclick="choose(this)">
+        <div class="cell" data-item="1" data-index="3" onclick="choose(this)">
           <span class="cell-num">٣</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <line x1="15" y1="25" x2="85" y2="50" stroke="#222" stroke-width="4" stroke-linecap="round"/>
-            <line x1="15" y1="75" x2="85" y2="50" stroke="#222" stroke-width="4" stroke-linecap="round"/>
-          </svg>
+          <img class="item-img" src="../img/items/07-3.png" alt="الصورة ٣" draggable="false" />
         </div>
 
-        <!-- خلية 4: خطان رأسيان متوازيان -->
         <div class="cell" data-item="1" data-index="4" onclick="choose(this)">
           <span class="cell-num">٤</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <line x1="35" y1="20" x2="35" y2="80" stroke="#222" stroke-width="4" stroke-linecap="round"/>
-            <line x1="65" y1="20" x2="65" y2="80" stroke="#222" stroke-width="4" stroke-linecap="round"/>
-          </svg>
+          <img class="item-img" src="../img/items/07-4.png" alt="الصورة ٤" draggable="false" />
         </div>
 
-        <!-- خلية 5: خطان قطريان متوازيان (\) -->
         <div class="cell" data-item="1" data-index="5" onclick="choose(this)">
           <span class="cell-num">٥</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <line x1="25" y1="20" x2="55" y2="80" stroke="#222" stroke-width="4" stroke-linecap="round"/>
-            <line x1="45" y1="20" x2="75" y2="80" stroke="#222" stroke-width="4" stroke-linecap="round"/>
-          </svg>
+          <img class="item-img" src="../img/items/07-5.png" alt="الصورة ٥" draggable="false" />
         </div>
 
-        <!-- خلية 6: خطان مائلان قليلاً ومتوازيان -->
         <div class="cell" data-item="1" data-index="6" onclick="choose(this)">
           <span class="cell-num">٦</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <line x1="15" y1="38" x2="85" y2="28" stroke="#222" stroke-width="4" stroke-linecap="round"/>
-            <line x1="15" y1="68" x2="85" y2="58" stroke="#222" stroke-width="4" stroke-linecap="round"/>
-          </svg>
+          <img class="item-img" src="../img/items/07-6.png" alt="الصورة ٦" draggable="false" />
         </div>
-
       </div>
       <div class="result-msg" id="result-1"></div>
     </div>
 
-    <!-- ══════════════════════════════════════
-         البند الثاني – الزاوية القائمة (Right Angle)
-         الصحيحة: خلية 6 (زاوية منفرجة ~112°)
-    ════════════════════════════════════════ -->
+    <!-- البند الثاني – المنحني (Curve) – بند 8 في الملف -->
     <div class="item-block" id="item-2">
       <div class="grid">
-
-        <!-- خلية 1: زاوية قائمة – الرأس أسفل اليسار -->
         <div class="cell" data-item="2" data-index="1" onclick="choose(this)">
           <span class="cell-num">١</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <path d="M 35 25 L 35 68 L 78 68" fill="none" stroke="#222" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M 35 58 L 45 58 L 45 68" fill="none" stroke="#222" stroke-width="1.8"/>
-          </svg>
+          <img class="item-img" src="../img/items/08-1.png" alt="الصورة ١" draggable="false" />
         </div>
 
-        <!-- خلية 2: زاوية قائمة – الرأس أسفل اليمين -->
         <div class="cell" data-item="2" data-index="2" onclick="choose(this)">
           <span class="cell-num">٢</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <path d="M 65 25 L 65 68 L 22 68" fill="none" stroke="#222" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M 65 58 L 55 58 L 55 68" fill="none" stroke="#222" stroke-width="1.8"/>
-          </svg>
+          <img class="item-img" src="../img/items/08-2.png" alt="الصورة ٢" draggable="false" />
         </div>
 
-        <!-- خلية 3: زاوية قائمة – الرأس أعلى اليسار -->
         <div class="cell" data-item="2" data-index="3" onclick="choose(this)">
           <span class="cell-num">٣</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <path d="M 35 75 L 35 32 L 78 32" fill="none" stroke="#222" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M 35 42 L 45 42 L 45 32" fill="none" stroke="#222" stroke-width="1.8"/>
-          </svg>
+          <img class="item-img" src="../img/items/08-3.png" alt="الصورة ٣" draggable="false" />
         </div>
 
-        <!-- خلية 4: زاوية قائمة – الرأس أعلى اليمين -->
         <div class="cell" data-item="2" data-index="4" onclick="choose(this)">
           <span class="cell-num">٤</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <path d="M 65 75 L 65 32 L 22 32" fill="none" stroke="#222" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M 65 42 L 55 42 L 55 32" fill="none" stroke="#222" stroke-width="1.8"/>
-          </svg>
+          <img class="item-img" src="../img/items/08-4.png" alt="الصورة ٤" draggable="false" />
         </div>
 
-        <!-- خلية 5: زاوية قائمة – ذراع عمودية أطول -->
-        <div class="cell" data-item="2" data-index="5" onclick="choose(this)">
+        <div class="cell" data-item="2" data-index="5" data-correct="true" onclick="choose(this)">
           <span class="cell-num">٥</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <path d="M 30 20 L 30 75 L 72 75" fill="none" stroke="#222" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M 30 65 L 40 65 L 40 75" fill="none" stroke="#222" stroke-width="1.8"/>
-          </svg>
+          <img class="item-img" src="../img/items/08-5.png" alt="الصورة ٥" draggable="false" />
         </div>
 
-        <!-- خلية 6: زاوية منفرجة ~112° ← الصحيحة -->
-        <div class="cell" data-item="2" data-index="6" data-correct="true" onclick="choose(this)">
+        <div class="cell" data-item="2" data-index="6" onclick="choose(this)">
           <span class="cell-num">٦</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <path d="M 10 45 L 50 72 L 90 45" fill="none" stroke="#222" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+          <img class="item-img" src="../img/items/08-6.png" alt="الصورة ٦" draggable="false" />
         </div>
-
       </div>
       <div class="result-msg" id="result-2"></div>
     </div>
 
-    <!-- ══════════════════════════════════════
-         البند الثالث – الأضلاع المتساوية (Equilateral Triangle)
-         الصحيحة: خلية 2 (مثلث متفاوت الأضلاع)
-    ════════════════════════════════════════ -->
+    <!-- البند الثالث – محاذاة النقاط في الخط (Alignment of points) – بند 9 في الملف -->
     <div class="item-block" id="item-3">
       <div class="grid">
-
-        <!-- خلية 1: مثلث متساوي الأضلاع – رأسه للأعلى -->
         <div class="cell" data-item="3" data-index="1" onclick="choose(this)">
           <span class="cell-num">١</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="50,15 15,75 85,75" fill="none" stroke="#222" stroke-width="4" stroke-linejoin="round"/>
-          </svg>
+          <img class="item-img" src="../img/items/09-1.png" alt="الصورة ١" draggable="false" />
         </div>
 
-        <!-- خلية 2: مثلث متفاوت الأضلاع ← الصحيحة -->
-        <div class="cell" data-item="3" data-index="2" data-correct="true" onclick="choose(this)">
+        <div class="cell" data-item="3" data-index="2" onclick="choose(this)">
           <span class="cell-num">٢</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="20,80 80,75 40,20" fill="none" stroke="#222" stroke-width="4" stroke-linejoin="round"/>
-          </svg>
+          <img class="item-img" src="../img/items/09-2.png" alt="الصورة ٢" draggable="false" />
         </div>
 
-        <!-- خلية 3: مثلث متساوي الأضلاع – رأسه للأسفل -->
         <div class="cell" data-item="3" data-index="3" onclick="choose(this)">
           <span class="cell-num">٣</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="50,85 15,25 85,25" fill="none" stroke="#222" stroke-width="4" stroke-linejoin="round"/>
-          </svg>
+          <img class="item-img" src="../img/items/09-3.png" alt="الصورة ٣" draggable="false" />
         </div>
 
-        <!-- خلية 4: مثلث متساوي الأضلاع – مائل للجانب -->
-        <div class="cell" data-item="3" data-index="4" onclick="choose(this)">
+        <div class="cell" data-item="3" data-index="4" data-correct="true" onclick="choose(this)">
           <span class="cell-num">٤</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="70,20 10,55 70,90" fill="none" stroke="#222" stroke-width="4" stroke-linejoin="round"/>
-          </svg>
+          <img class="item-img" src="../img/items/09-4.png" alt="الصورة ٤" draggable="false" />
         </div>
 
-        <!-- خلية 5: مثلث متساوي الأضلاع – أصغر حجماً -->
         <div class="cell" data-item="3" data-index="5" onclick="choose(this)">
           <span class="cell-num">٥</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="50,22 23,68 77,68" fill="none" stroke="#222" stroke-width="4" stroke-linejoin="round"/>
-          </svg>
+          <img class="item-img" src="../img/items/09-5.png" alt="الصورة ٥" draggable="false" />
         </div>
 
-        <!-- خلية 6: مثلث متساوي الأضلاع – مدوَّر على القاعدة -->
         <div class="cell" data-item="3" data-index="6" onclick="choose(this)">
           <span class="cell-num">٦</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="85,35 15,35 50,95" fill="none" stroke="#222" stroke-width="4" stroke-linejoin="round"/>
-          </svg>
+          <img class="item-img" src="../img/items/09-6.png" alt="الصورة ٦" draggable="false" />
         </div>
-
       </div>
       <div class="result-msg" id="result-3"></div>
     </div>
 
-    <!-- ══════════════════════════════════════
-         البند الرابع – التعامد (Perpendicularity)
-         الصحيحة: خلية 4 (خط مائل – غير متعامد)
-    ════════════════════════════════════════ -->
+    <!-- البند الرابع – محاذاة النقاط في الخط (Alignment of points) – بند 10 في الملف -->
     <div class="item-block" id="item-4">
       <div class="grid">
-
-        <!-- خلية 1: تشكيل T – خط عمودي من اليسار -->
-        <div class="cell" data-item="4" data-index="1" onclick="choose(this)">
+        <div class="cell" data-item="4" data-index="1" data-correct="true" onclick="choose(this)">
           <span class="cell-num">١</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <line x1="15" y1="62" x2="85" y2="62" stroke="#222" stroke-width="4" stroke-linecap="round"/>
-            <line x1="35" y1="25" x2="35" y2="62" stroke="#222" stroke-width="4" stroke-linecap="round"/>
-            <path d="M 35 52 L 44 52 L 44 62" fill="none" stroke="#222" stroke-width="1.8"/>
-          </svg>
+          <img class="item-img" src="../img/items/10-1.png" alt="الصورة ١" draggable="false" />
         </div>
 
-        <!-- خلية 2: تشكيل T – خط عمودي في المنتصف -->
         <div class="cell" data-item="4" data-index="2" onclick="choose(this)">
           <span class="cell-num">٢</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <line x1="15" y1="62" x2="85" y2="62" stroke="#222" stroke-width="4" stroke-linecap="round"/>
-            <line x1="50" y1="25" x2="50" y2="62" stroke="#222" stroke-width="4" stroke-linecap="round"/>
-            <path d="M 50 52 L 59 52 L 59 62" fill="none" stroke="#222" stroke-width="1.8"/>
-          </svg>
+          <img class="item-img" src="../img/items/10-2.png" alt="الصورة ٢" draggable="false" />
         </div>
 
-        <!-- خلية 3: تشكيل T – خط عمودي من اليمين -->
         <div class="cell" data-item="4" data-index="3" onclick="choose(this)">
           <span class="cell-num">٣</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <line x1="15" y1="62" x2="85" y2="62" stroke="#222" stroke-width="4" stroke-linecap="round"/>
-            <line x1="65" y1="25" x2="65" y2="62" stroke="#222" stroke-width="4" stroke-linecap="round"/>
-            <path d="M 65 52 L 74 52 L 74 62" fill="none" stroke="#222" stroke-width="1.8"/>
-          </svg>
+          <img class="item-img" src="../img/items/10-3.png" alt="الصورة ٣" draggable="false" />
         </div>
 
-        <!-- خلية 4: خط مائل يلتقي بخط أفقي (غير متعامد ~55°) ← الصحيحة -->
-        <div class="cell" data-item="4" data-index="4" data-correct="true" onclick="choose(this)">
+        <div class="cell" data-item="4" data-index="4" onclick="choose(this)">
           <span class="cell-num">٤</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <line x1="15" y1="62" x2="85" y2="62" stroke="#222" stroke-width="4" stroke-linecap="round"/>
-            <line x1="30" y1="22" x2="57" y2="62" stroke="#222" stroke-width="4" stroke-linecap="round"/>
-          </svg>
+          <img class="item-img" src="../img/items/10-4.png" alt="الصورة ٤" draggable="false" />
         </div>
 
-        <!-- خلية 5: تشكيل T – الخط الأفقي يلتقي بخط رأسي من الجانب -->
         <div class="cell" data-item="4" data-index="5" onclick="choose(this)">
           <span class="cell-num">٥</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <line x1="40" y1="20" x2="40" y2="80" stroke="#222" stroke-width="4" stroke-linecap="round"/>
-            <line x1="40" y1="50" x2="80" y2="50" stroke="#222" stroke-width="4" stroke-linecap="round"/>
-            <path d="M 40 50 L 40 41 L 49 41" fill="none" stroke="#222" stroke-width="1.8"/>
-          </svg>
+          <img class="item-img" src="../img/items/10-5.png" alt="الصورة ٥" draggable="false" />
         </div>
 
-        <!-- خلية 6: زاوية قائمة في الركن (L مع مربع) -->
         <div class="cell" data-item="4" data-index="6" onclick="choose(this)">
           <span class="cell-num">٦</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <line x1="25" y1="75" x2="25" y2="30" stroke="#222" stroke-width="4" stroke-linecap="round"/>
-            <line x1="25" y1="75" x2="75" y2="75" stroke="#222" stroke-width="4" stroke-linecap="round"/>
-            <path d="M 25 66 L 34 66 L 34 75" fill="none" stroke="#222" stroke-width="1.8"/>
-          </svg>
+          <img class="item-img" src="../img/items/10-6.png" alt="الصورة ٦" draggable="false" />
         </div>
-
       </div>
       <div class="result-msg" id="result-4"></div>
     </div>
 
-    <!-- ══════════════════════════════════════
-         البند الخامس – الاستقامة (Collinearity)
-         الصحيحة: خلية 1 (نقطة وسطى منحرفة عن الاستقامة)
-    ════════════════════════════════════════ -->
+    <!-- البند الخامس – الخطوط المتوازية (Parallel lines) – بند 11 في الملف -->
     <div class="item-block" id="item-5">
       <div class="grid">
-
-        <!-- خلية 1: نقطة وسطى خارج الخط (منحني) ← الصحيحة -->
-        <div class="cell" data-item="5" data-index="1" data-correct="true" onclick="choose(this)">
+        <div class="cell" data-item="5" data-index="1" onclick="choose(this)">
           <span class="cell-num">١</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <polyline points="15,55 50,26 85,55" fill="none" stroke="#222" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="15" cy="55" r="5" fill="#222"/>
-            <circle cx="50" cy="26" r="5" fill="#222"/>
-            <circle cx="85" cy="55" r="5" fill="#222"/>
-          </svg>
+          <img class="item-img" src="../img/items/11-1.png" alt="الصورة ١" draggable="false" />
         </div>
 
-        <!-- خلية 2: ثلاث نقاط على خط أفقي مستقيم -->
         <div class="cell" data-item="5" data-index="2" onclick="choose(this)">
           <span class="cell-num">٢</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <line x1="12" y1="50" x2="88" y2="50" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
-            <circle cx="12" cy="50" r="5" fill="#222"/>
-            <circle cx="50" cy="50" r="5" fill="#222"/>
-            <circle cx="88" cy="50" r="5" fill="#222"/>
-          </svg>
+          <img class="item-img" src="../img/items/11-2.png" alt="الصورة ٢" draggable="false" />
         </div>
 
-        <!-- خلية 3: ثلاث نقاط على خط قطري / -->
-        <div class="cell" data-item="5" data-index="3" onclick="choose(this)">
+        <div class="cell" data-item="5" data-index="3" data-correct="true" onclick="choose(this)">
           <span class="cell-num">٣</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <line x1="15" y1="75" x2="85" y2="25" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
-            <circle cx="15" cy="75" r="5" fill="#222"/>
-            <circle cx="50" cy="50" r="5" fill="#222"/>
-            <circle cx="85" cy="25" r="5" fill="#222"/>
-          </svg>
+          <img class="item-img" src="../img/items/11-3.png" alt="الصورة ٣" draggable="false" />
         </div>
 
-        <!-- خلية 4: ثلاث نقاط على خط قطري \ -->
         <div class="cell" data-item="5" data-index="4" onclick="choose(this)">
           <span class="cell-num">٤</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <line x1="15" y1="25" x2="85" y2="75" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
-            <circle cx="15" cy="25" r="5" fill="#222"/>
-            <circle cx="50" cy="50" r="5" fill="#222"/>
-            <circle cx="85" cy="75" r="5" fill="#222"/>
-          </svg>
+          <img class="item-img" src="../img/items/11-4.png" alt="الصورة ٤" draggable="false" />
         </div>
 
-        <!-- خلية 5: ثلاث نقاط على خط شديد الانحدار -->
         <div class="cell" data-item="5" data-index="5" onclick="choose(this)">
           <span class="cell-num">٥</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <line x1="30" y1="82" x2="70" y2="18" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
-            <circle cx="30" cy="82" r="5" fill="#222"/>
-            <circle cx="50" cy="50" r="5" fill="#222"/>
-            <circle cx="70" cy="18" r="5" fill="#222"/>
-          </svg>
+          <img class="item-img" src="../img/items/11-5.png" alt="الصورة ٥" draggable="false" />
         </div>
 
-        <!-- خلية 6: ثلاث نقاط على خط مائل قليلاً -->
         <div class="cell" data-item="5" data-index="6" onclick="choose(this)">
           <span class="cell-num">٦</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <line x1="12" y1="55" x2="88" y2="43" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
-            <circle cx="12" cy="55" r="5" fill="#222"/>
-            <circle cx="50" cy="49" r="5" fill="#222"/>
-            <circle cx="88" cy="43" r="5" fill="#222"/>
-          </svg>
+          <img class="item-img" src="../img/items/11-6.png" alt="الصورة ٦" draggable="false" />
         </div>
-
       </div>
       <div class="result-msg" id="result-5"></div>
     </div>
 
-    <!-- ══════════════════════════════════════
-         البند السادس – المثلث القائم (Right Triangle)
-         الصحيحة: خلية 5 (مثلث منفرج الزاوية)
-    ════════════════════════════════════════ -->
+    <!-- البند السادس – الخطوط القاطعة (Secant lines) – بند 12 في الملف -->
     <div class="item-block" id="item-6">
       <div class="grid">
-
-        <!-- خلية 1: مثلث قائم – الزاوية القائمة أسفل اليسار -->
         <div class="cell" data-item="6" data-index="1" onclick="choose(this)">
           <span class="cell-num">١</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="20,80 20,25 75,80" fill="none" stroke="#222" stroke-width="4" stroke-linejoin="round"/>
-            <path d="M 20 70 L 30 70 L 30 80" fill="none" stroke="#222" stroke-width="1.8"/>
-          </svg>
+          <img class="item-img" src="../img/items/12-1.png" alt="الصورة ١" draggable="false" />
         </div>
 
-        <!-- خلية 2: مثلث قائم – الزاوية القائمة أسفل اليمين -->
         <div class="cell" data-item="6" data-index="2" onclick="choose(this)">
           <span class="cell-num">٢</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="25,80 80,80 80,25" fill="none" stroke="#222" stroke-width="4" stroke-linejoin="round"/>
-            <path d="M 80 70 L 70 70 L 70 80" fill="none" stroke="#222" stroke-width="1.8"/>
-          </svg>
+          <img class="item-img" src="../img/items/12-2.png" alt="الصورة ٢" draggable="false" />
         </div>
 
-        <!-- خلية 3: مثلث قائم – الزاوية القائمة أعلى اليسار -->
         <div class="cell" data-item="6" data-index="3" onclick="choose(this)">
           <span class="cell-num">٣</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="20,20 20,75 75,20" fill="none" stroke="#222" stroke-width="4" stroke-linejoin="round"/>
-            <path d="M 20 30 L 30 30 L 30 20" fill="none" stroke="#222" stroke-width="1.8"/>
-          </svg>
+          <img class="item-img" src="../img/items/12-3.png" alt="الصورة ٣" draggable="false" />
         </div>
 
-        <!-- خلية 4: مثلث قائم – الزاوية القائمة أعلى اليمين -->
         <div class="cell" data-item="6" data-index="4" onclick="choose(this)">
           <span class="cell-num">٤</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="25,20 80,20 80,75" fill="none" stroke="#222" stroke-width="4" stroke-linejoin="round"/>
-            <path d="M 80 30 L 70 30 L 70 20" fill="none" stroke="#222" stroke-width="1.8"/>
-          </svg>
+          <img class="item-img" src="../img/items/12-4.png" alt="الصورة ٤" draggable="false" />
         </div>
 
-        <!-- خلية 5: مثلث منفرج الزاوية ← الصحيحة -->
         <div class="cell" data-item="6" data-index="5" data-correct="true" onclick="choose(this)">
           <span class="cell-num">٥</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="10,80 90,80 40,50" fill="none" stroke="#222" stroke-width="4" stroke-linejoin="round"/>
-          </svg>
+          <img class="item-img" src="../img/items/12-5.png" alt="الصورة ٥" draggable="false" />
         </div>
 
-        <!-- خلية 6: مثلث قائم – نسب مختلفة -->
         <div class="cell" data-item="6" data-index="6" onclick="choose(this)">
           <span class="cell-num">٦</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="30,80 70,80 30,25" fill="none" stroke="#222" stroke-width="4" stroke-linejoin="round"/>
-            <path d="M 30 70 L 40 70 L 40 80" fill="none" stroke="#222" stroke-width="1.8"/>
-          </svg>
+          <img class="item-img" src="../img/items/12-6.png" alt="الصورة ٦" draggable="false" />
         </div>
-
       </div>
       <div class="result-msg" id="result-6"></div>
     </div>
 
-    <!-- ══════════════════════════════════════
-         البند السابع – المستطيل (Rectangle)
-         الصحيحة: خلية 6 (متوازي أضلاع – زوايا غير قائمة)
-    ════════════════════════════════════════ -->
+    <!-- البند السابع – الزاوية القائمة (Right angle) – بند 13 في الملف -->
     <div class="item-block" id="item-7">
       <div class="grid">
-
-        <!-- خلية 1: مستطيل عريض -->
         <div class="cell" data-item="7" data-index="1" onclick="choose(this)">
           <span class="cell-num">١</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <rect x="15" y="35" width="70" height="30" fill="none" stroke="#222" stroke-width="4"/>
-          </svg>
+          <img class="item-img" src="../img/items/13-1.png" alt="الصورة ١" draggable="false" />
         </div>
 
-        <!-- خلية 2: مستطيل طويل -->
         <div class="cell" data-item="7" data-index="2" onclick="choose(this)">
           <span class="cell-num">٢</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <rect x="30" y="15" width="40" height="70" fill="none" stroke="#222" stroke-width="4"/>
-          </svg>
+          <img class="item-img" src="../img/items/13-2.png" alt="الصورة ٢" draggable="false" />
         </div>
 
-        <!-- خلية 3: مربع -->
         <div class="cell" data-item="7" data-index="3" onclick="choose(this)">
           <span class="cell-num">٣</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <rect x="18" y="18" width="64" height="64" fill="none" stroke="#222" stroke-width="4"/>
-          </svg>
+          <img class="item-img" src="../img/items/13-3.png" alt="الصورة ٣" draggable="false" />
         </div>
 
-        <!-- خلية 4: مستطيل رفيع -->
         <div class="cell" data-item="7" data-index="4" onclick="choose(this)">
           <span class="cell-num">٤</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <rect x="15" y="40" width="70" height="20" fill="none" stroke="#222" stroke-width="4"/>
-          </svg>
+          <img class="item-img" src="../img/items/13-4.png" alt="الصورة ٤" draggable="false" />
         </div>
 
-        <!-- خلية 5: مستطيل متوسط -->
         <div class="cell" data-item="7" data-index="5" onclick="choose(this)">
           <span class="cell-num">٥</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <rect x="20" y="25" width="60" height="50" fill="none" stroke="#222" stroke-width="4"/>
-          </svg>
+          <img class="item-img" src="../img/items/13-5.png" alt="الصورة ٥" draggable="false" />
         </div>
 
-        <!-- خلية 6: متوازي أضلاع (زوايا غير قائمة) ← الصحيحة -->
         <div class="cell" data-item="7" data-index="6" data-correct="true" onclick="choose(this)">
           <span class="cell-num">٦</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="15,75 75,75 85,25 25,25" fill="none" stroke="#222" stroke-width="4" stroke-linejoin="round"/>
-          </svg>
+          <img class="item-img" src="../img/items/13-6.png" alt="الصورة ٦" draggable="false" />
         </div>
-
       </div>
       <div class="result-msg" id="result-7"></div>
     </div>
 
-    <!-- ══════════════════════════════════════
-         البند الثامن – قطر الدائرة (Diameter)
-         الصحيحة: خلية 3 (وتر لا يمر بالمركز)
-    ════════════════════════════════════════ -->
+    <!-- البند الثامن – الزاوية القائمة (Right angle) – بند 14 في الملف -->
     <div class="item-block" id="item-8">
       <div class="grid">
-
-        <!-- خلية 1: دائرة مع قطر أفقي -->
         <div class="cell" data-item="8" data-index="1" onclick="choose(this)">
           <span class="cell-num">١</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="50" r="35" fill="none" stroke="#222" stroke-width="4"/>
-            <line x1="15" y1="50" x2="85" y2="50" stroke="#222" stroke-width="3" stroke-linecap="round"/>
-            <circle cx="50" cy="50" r="3" fill="#222"/>
-          </svg>
+          <img class="item-img" src="../img/items/14-1.png" alt="الصورة ١" draggable="false" />
         </div>
 
-        <!-- خلية 2: دائرة مع قطر رأسي -->
         <div class="cell" data-item="8" data-index="2" onclick="choose(this)">
           <span class="cell-num">٢</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="50" r="35" fill="none" stroke="#222" stroke-width="4"/>
-            <line x1="50" y1="15" x2="50" y2="85" stroke="#222" stroke-width="3" stroke-linecap="round"/>
-            <circle cx="50" cy="50" r="3" fill="#222"/>
-          </svg>
+          <img class="item-img" src="../img/items/14-2.png" alt="الصورة ٢" draggable="false" />
         </div>
 
-        <!-- خلية 3: دائرة مع وتر (لا يمر بالمركز) ← الصحيحة -->
-        <div class="cell" data-item="8" data-index="3" data-correct="true" onclick="choose(this)">
+        <div class="cell" data-item="8" data-index="3" onclick="choose(this)">
           <span class="cell-num">٣</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="50" r="35" fill="none" stroke="#222" stroke-width="4"/>
-            <line x1="21" y1="30" x2="79" y2="30" stroke="#222" stroke-width="3" stroke-linecap="round"/>
-            <circle cx="50" cy="50" r="3" fill="#222"/>
-          </svg>
+          <img class="item-img" src="../img/items/14-3.png" alt="الصورة ٣" draggable="false" />
         </div>
 
-        <!-- خلية 4: دائرة مع قطر قطري / -->
         <div class="cell" data-item="8" data-index="4" onclick="choose(this)">
           <span class="cell-num">٤</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="50" r="35" fill="none" stroke="#222" stroke-width="4"/>
-            <line x1="25" y1="75" x2="75" y2="25" stroke="#222" stroke-width="3" stroke-linecap="round"/>
-            <circle cx="50" cy="50" r="3" fill="#222"/>
-          </svg>
+          <img class="item-img" src="../img/items/14-4.png" alt="الصورة ٤" draggable="false" />
         </div>
 
-        <!-- خلية 5: دائرة مع قطر قطري \ -->
-        <div class="cell" data-item="8" data-index="5" onclick="choose(this)">
+        <div class="cell" data-item="8" data-index="5" data-correct="true" onclick="choose(this)">
           <span class="cell-num">٥</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="50" r="35" fill="none" stroke="#222" stroke-width="4"/>
-            <line x1="25" y1="25" x2="75" y2="75" stroke="#222" stroke-width="3" stroke-linecap="round"/>
-            <circle cx="50" cy="50" r="3" fill="#222"/>
-          </svg>
+          <img class="item-img" src="../img/items/14-5.png" alt="الصورة ٥" draggable="false" />
         </div>
 
-        <!-- خلية 6: دائرة مع قطر مائل -->
         <div class="cell" data-item="8" data-index="6" onclick="choose(this)">
           <span class="cell-num">٦</span>
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="50" r="35" fill="none" stroke="#222" stroke-width="4"/>
-            <line x1="16" y1="60" x2="84" y2="40" stroke="#222" stroke-width="3" stroke-linecap="round"/>
-            <circle cx="50" cy="50" r="3" fill="#222"/>
-          </svg>
+          <img class="item-img" src="../img/items/14-6.png" alt="الصورة ٦" draggable="false" />
         </div>
-
       </div>
       <div class="result-msg" id="result-8"></div>
     </div>

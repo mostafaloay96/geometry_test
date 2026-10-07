@@ -11,9 +11,9 @@ var GEO_SECTIONS = [
   { key: 'practice',  label: 'تدريبي',    total: 2,  index: 1, next: 'topology.html'   },
   { key: 'topology',  label: 'طوبولوجيا', total: 4,  index: 2, next: 'euclidean.html'  },
   { key: 'euclidean', label: 'إقليدية',   total: 8,  index: 3, next: 'geometric.html'  },
-  { key: 'geometric', label: 'أشكال',     total: 8,  index: 4, next: 'symmetry.html'   },
-  { key: 'symmetry',  label: 'تماثل',     total: 8,  index: 5, next: 'metric.html'     },
-  { key: 'metric',    label: 'مترية',     total: 8,  index: 6, next: 'transform.html'  },
+  { key: 'geometric', label: 'أشكال',     total: 9,  index: 4, next: 'symmetry.html'   },
+  { key: 'symmetry',  label: 'تماثل',     total: 7,  index: 5, next: 'metric.html'     },
+  { key: 'metric',    label: 'مترية',     total: 7,  index: 6, next: 'transform.html'  },
   { key: 'transform', label: 'تحويلات',   total: 8,  index: 7, next: 'results.html'    }
 ];
 
