@@ -133,8 +133,8 @@
       </div>
 
       <div class="form-group">
-        <label>التخصص / المهنة (اختياري)</label>
-        <input type="text" id="pSpeciality" placeholder="مثال: طالب، مهندس، معلم...">
+        <label>المدرسة (اختياري)</label>
+        <input type="text" id="pSchool" placeholder="مثال: مدرسة النور الابتدائية">
       </div>
 
       <button type="submit" class="btn-start-test" id="btnStartTest">
@@ -155,7 +155,7 @@
       if (p.age)         document.getElementById('pAge').value         = p.age;
       if (p.gender)      document.getElementById('pGender').value      = p.gender;
       if (p.education)   document.getElementById('pEducation').value   = p.education;
-      if (p.speciality)  document.getElementById('pSpeciality').value  = p.speciality;
+      if (p.school)      document.getElementById('pSchool').value      = p.school;
     })();
 
     document.getElementById('participantForm').addEventListener('submit', function(e) {
@@ -174,7 +174,7 @@
         age:        age,
         gender:     gen,
         education:  edu,
-        speciality: document.getElementById('pSpeciality').value.trim(),
+        school:     document.getElementById('pSchool').value.trim(),
         date:       new Date().toISOString()
       }));
       localStorage.removeItem('geoScores');

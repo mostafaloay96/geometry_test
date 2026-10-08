@@ -319,7 +319,7 @@
           ['cake',    'العمر',           p.age + ' سنة'],
           ['wc',      'الجنس',           genderMap[p.gender] || p.gender],
           ['school',  'المستوى',          eduMap[p.education] || p.education],
-          p.speciality ? ['work', 'التخصص', p.speciality] : null
+          p.school ? ['school', 'المدرسة', p.school] : null
         ].filter(Boolean);
         html = rows.map(function(r) {
           return '<div class="profile-row"><span class="material-icons">' + r[0] + '</span>'
